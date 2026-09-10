@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media, Press & Video Gallery | White Volunteers Foundation</title>
+  <meta name="description" content="Watch ground documentaries, field action videos, and read national press coverage of White Volunteers Foundation featured in Times of India and Sakshi.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
+
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  </script>
+
+  <style>
+    @media (max-width: 1260px) {
+      .nav-menu, .nav-menu * {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+      .header-actions .btn-outline {
+        display: none !important;
+      }
+      .mobile-toggle {
+        display: flex !important;
+      }
+    }
+    .press-article-card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      transition: var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+    }
+    .press-article-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    .press-badge-header {
+      padding: 18px 24px;
+      background: var(--bg-warm);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .press-source-logo {
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.5px;
+    }
+    .press-source-toi {
+      color: #e21b22;
+      font-family: Georgia, serif;
+    }
+    .press-source-sakshi {
+      color: #f37021;
+      font-weight: 800;
+    }
+    .press-body {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-container">
+      <div class="topbar-group">
+        <span class="topbar-item"><i class="fas fa-map-marker-alt"></i> HQ: Greater Hyderabad, Telangana - 500083</span>
+        <span class="topbar-sep">&bull;</span>
+        <span class="topbar-item"><i class="fas fa-envelope"></i> <a href="mailto:founderwvfindia@wvfindia.org">founderwvfindia@wvfindia.org</a></span>
+      </div>
+
+      <div class="topbar-group">
+        <span class="topbar-item"><i class="fas fa-phone-alt"></i> <a href="tel:+919100894893">+91 91008 94893</a> / <a href="tel:+918400996611">84009 96611</a> / <a href="tel:+919186211983">91862 11983</a></span>
+        <span class="topbar-sep">&bull;</span>
+        <div class="topbar-socials">
+          <a href="https://www.facebook.com/www.wvfindia.org?mibextid=rS40aB7S9Ucbxw6v" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/p/DHYTIrJPWHr/?igsh=NXNieDFqODU4czhj" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://in.linkedin.com/in/latha-maraveni-44308a165" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="index.html" class="logo-container" aria-label="White Volunteers Foundation Home">
+          <img src="assets/images/logo.png" alt="White Volunteer's Foundation" class="brand-logo-img">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <!-- Get Involved Dropdown -->
+          <li class="nav-item has-mega-menu">
+            <a href="volunteer.html" class="nav-link">Get Involved <i class="fas fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-menu-grid">
+                  <div>
+                    <h4 class="mega-col-title">Volunteering Tracks</h4>
+                    <ul class="mega-list">
+                      <li><a href="volunteer.html#community-internship">Community Connect Internship</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('Weekend Seva')">Weekend School Seva</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('Skill Mentorship')">Student Skill Mentorship</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('School Kit Drive')">School Kit Donation Drive</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Partnerships</h4>
+                    <ul class="mega-list">
+                      <li><a href="programs.html">Corporate CSR Collaborations</a></li>
+                      <li><a href="about.html#values">Institutional Partnerships</a></li>
+                      <li><a href="about.html#impact-approach">Our Grassroots Approach</a></li>
+                      <li><a href="contact.html">Partner With Us</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Giving & Impact</h4>
+                    <ul class="mega-list">
+                      <li><a href="donate.html">Online Donation (80G Exemption)</a></li>
+                      <li><a href="donate.html#payment-portal">Scan PhonePe QR</a></li>
+                      <li><a href="newsletter.html">Foundation Newsletter Vol-1</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-cta-card">
+                    <h4>Make a Difference</h4>
+                    <p>Join over 12,500 active volunteers today!</p>
+                    <button class="btn btn-primary btn-sm" onclick="openVolunteerModal('Header Menu Signup')"><i class="fas fa-user-plus"></i> Join as Volunteer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Programs Dropdown -->
+          <li class="nav-item has-mega-menu">
+            <a href="programs.html" class="nav-link">Programs <i class="fas fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-menu-grid">
+                  <div>
+                    <h4 class="mega-col-title">5 Key Projects</h4>
+                    <ul class="mega-list">
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(1)">1. School Renovation</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(2)">2. Stationery Distribution</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(3)">3. Student Skill Development</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(4)">4. Digital Library in Schools</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(5)">5. Women Empowerment</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Flagship Drives</h4>
+                    <ul class="mega-list">
+                      <li><a href="newsletter.html#nityapalamrutam">Nityapalamrutam Milk Aid</a></li>
+                      <li><a href="newsletter.html#vastradaan">Vastradaan Clothing Drive</a></li>
+                      <li><a href="newsletter.html#bhuddhishakti">Bhuddhishakti Scholarships</a></li>
+                      <li><a href="newsletter.html#brainybirds">#BRAINYBIRDS School Seva</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Special Campaigns</h4>
+                    <ul class="mega-list">
+                      <li><a href="volunteer.html#internship">Community Connect Internship</a></li>
+                      <li><a href="javascript:void(0)" onclick="openDonateModal(200, 'Education Today - 500 Children')">Education Today Campaign</a></li>
+                      <li><a href="programs.html">View All Flagship Programs</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-cta-card">
+                    <h4 style="color: var(--primary);">Support A Child</h4>
+                    <p>Sponsor a child's complete school stationery kit for only ₹200.</p>
+                    <button class="btn btn-primary btn-sm" onclick="openDonateModal(200, 'Sponsor a Child')"><i class="fas fa-heart"></i> Donate ₹200</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Media & Videos Link -->
+          <li class="nav-item">
+            <a href="media.html" class="nav-link active">Media & Videos</a>
+          </li>
+
+          <!-- News & Stories Dropdown -->
+          <li class="nav-item">
+            <a href="newsletter.html" class="nav-link">News & Stories <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="newsletter.html" class="dropdown-item">Foundation Newsletter (Vol-1)</a></li>
+              <li><a href="media.html" class="dropdown-item">Video Documentaries & Ground Action</a></li>
+              <li><a href="https://timesofindia.indiatimes.com/city/hyderabad/officers-initiative-provides-nutrition-to-3k-students/amp_articleshow/116662040.cms" target="_blank" class="dropdown-item">Times of India National Feature</a></li>
+              <li><a href="https://www.sakshi.com/telugu-news/family/start-school-breakfast-latha-maraveni-latha-maraveni-1443149" target="_blank" class="dropdown-item">Sakshi News Story</a></li>
+            </ul>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html#story" class="dropdown-item">Our Story & Journey</a></li>
+              <li><a href="about.html#leadership-note" class="dropdown-item">Message from the CEO</a></li>
+              <li><a href="about.html#impact-approach" class="dropdown-item">Our Grassroots Approach</a></li>
+              <li><a href="about.html#values" class="dropdown-item">Our 6 Core Values</a></li>
+            </ul>
+          </li>
+
+          <!-- Contact Us Link -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- Right Side Action Buttons -->
+        <div class="header-actions">
+          <button class="btn btn-outline btn-sm" onclick="openVolunteerModal('Header Volunteer')">Join us</button>
+          <button class="btn btn-primary btn-sm" onclick="openDonateModal(1000, 'Header Donate')"><i class="fas fa-heart"></i> Donate</button>
+          <button class="mobile-toggle" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. Mobile Off-Canvas Drawer (Rich, Interactive Navigation)
+       ========================================================================= -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo-container" aria-label="White Volunteers Foundation">
+        <img src="assets/images/logo.png" alt="White Volunteers Foundation" style="height: 48px; border-radius: 6px;">
+      </a>
+      <button class="drawer-close" aria-label="Close Navigation"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li>
+        <a href="index.html" class="mobile-nav-link">
+          <span><i class="fas fa-home mobile-nav-icon"></i> Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="volunteer.html" class="mobile-nav-link">
+          <span><i class="fas fa-hands-helping mobile-nav-icon"></i> Get Involved</span>
+        </a>
+      </li>
+      <li class="mobile-has-sub">
+        <div class="mobile-link-row">
+          <a href="programs.html" class="mobile-nav-link">
+            <span><i class="fas fa-graduation-cap mobile-nav-icon"></i> Programs</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle Programs Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="programs.html#breakfast"><i class="fas fa-utensils"></i> Free Breakfast Seva</a></li>
+          <li><a href="programs.html#studyhours"><i class="fas fa-book-reader"></i> Evening Study Hours</a></li>
+          <li><a href="newsletter.html#vastradaan"><i class="fas fa-tshirt"></i> Vastradaan Clothes</a></li>
+          <li><a href="newsletter.html#bhuddhishakti"><i class="fas fa-award"></i> Bhuddhishakti Awards</a></li>
+          <li><a href="newsletter.html#brainybirds"><i class="fas fa-dove"></i> #BRAINYBIRDS Seva</a></li>
+          <li><a href="programs.html"><i class="fas fa-arrow-right"></i> View All 5 Programs</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="media.html" class="mobile-nav-link active">
+          <span><i class="fas fa-photo-video mobile-nav-icon"></i> Media & Videos</span>
+        </a>
+      </li>
+      <li class="mobile-has-sub">
+        <div class="mobile-link-row">
+          <a href="newsletter.html" class="mobile-nav-link">
+            <span><i class="fas fa-newspaper mobile-nav-icon"></i> News & Stories</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle Stories Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="newsletter.html"><i class="fas fa-file-alt"></i> Foundation Newsletter (Vol-1)</a></li>
+          <li><a href="media.html"><i class="fas fa-video"></i> Video Documentaries</a></li>
+          <li><a href="https://timesofindia.indiatimes.com/city/hyderabad/officers-initiative-provides-nutrition-to-3k-students/amp_articleshow/116662040.cms" target="_blank"><i class="fas fa-external-link-alt"></i> Times of India National Feature</a></li>
+          <li><a href="https://www.sakshi.com/telugu-news/family/start-school-breakfast-latha-maraveni-latha-maraveni-1443149" target="_blank"><i class="fas fa-external-link-alt"></i> Sakshi News Story</a></li>
+        </ul>
+      </li>
+      <li class="mobile-has-sub">
+        <div class="mobile-link-row">
+          <a href="about.html" class="mobile-nav-link">
+            <span><i class="fas fa-users mobile-nav-icon"></i> About Us</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle About Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="about.html#story"><i class="fas fa-heart"></i> Our Story & Journey</a></li>
+          <li><a href="about.html#leadership-note"><i class="fas fa-user-tie"></i> Message from the CEO</a></li>
+          <li><a href="about.html#impact-approach"><i class="fas fa-seedling"></i> Grassroots Approach</a></li>
+          <li><a href="about.html#values"><i class="fas fa-check-circle"></i> Our 6 Core Values</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="contact.html" class="mobile-nav-link">
+          <span><i class="fas fa-phone-alt mobile-nav-icon"></i> Contact Us</span>
+        </a>
+      </li>
+    </ul>
+    <div class="drawer-footer">
+      <button class="btn btn-primary" style="width: 100%; border-radius: 50px; font-weight: 700; padding: 12px;" onclick="openDonateModal(1000, 'Mobile Drawer')"><i class="fas fa-heart"></i> Donate Now</button>
+      <button class="btn btn-outline" style="width: 100%; border-radius: 50px; font-weight: 600; padding: 10px;" onclick="openVolunteerModal('Mobile Drawer')"><i class="fas fa-user-plus"></i> Join as Volunteer</button>
+      <div class="drawer-quick-contact">
+        <a href="tel:+919100894893" class="quick-contact-btn"><i class="fas fa-phone-alt"></i> Call Us</a>
+        <a href="https://wa.me/919100894893" target="_blank" class="quick-contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Banner -->
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, #0c4fa8 100%); color: #fff; padding: 4.5rem 0; text-align: center;">
+    <div class="container">
+      <h1 style="color: #ffffff; margin-bottom: 1rem; font-size: 2.6rem; font-weight: 800;">Media Coverage & Video Documentaries</h1>
+      <p style="color: rgba(255, 255, 255, 0.95); max-width: 820px; margin: 0 auto; font-size: 1.15rem; line-height: 1.6;">
+        Witness how our morning nutrition, school renovation, stationery distribution, and youth training programs are transforming thousands of lives every day.
+      </p>
+    </div>
+  </section>
+
+  <!-- Major National Press Coverage (Times of India & Sakshi) -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Featured in Prominent Media</h2>
+        <p class="section-desc">National and regional news coverage highlighting White Volunteers Foundation's impact on child nutrition and school attendance.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; margin-bottom: 50px;">
+        
+        <!-- Times of India Article Card -->
+        <div class="press-article-card">
+          <div class="press-badge-header">
+            <span class="press-source-logo press-source-toi"><i class="fas fa-newspaper"></i> THE TIMES OF INDIA</span>
+            <span class="badge" style="background: #ffebe8; color: #e21b22; font-size: 0.78rem;">National Daily</span>
+          </div>
+          <div class="press-body">
+            <h3 style="font-size: 1.3rem; color: var(--secondary); margin-bottom: 12px; line-height: 1.4;">
+              "Officer’s initiative provides nutrition to 3k students"
+            </h3>
+            <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-main); margin-bottom: 15px;">
+              <strong>Hyderabad:</strong> What was started by Shekhar Maraveni as an initiative to supply milk to two schools in 2018 is today serving over <strong>3,000+ government school students</strong> with daily morning nutrition (milk and Ragi Jaava), dramatically boosting classroom attendance, concentration, and child health.
+            </p>
+            <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
+              <a href="https://timesofindia.indiatimes.com/city/hyderabad/officers-initiative-provides-nutrition-to-3k-students/amp_articleshow/116662040.cms" target="_blank" class="btn btn-outline btn-sm" style="color: #e21b22; border-color: #e21b22; flex: 1; text-align: center;"><i class="fas fa-newspaper"></i> Read on Times of India <i class="fas fa-external-link-alt" style="font-size: 0.72rem; margin-left: 4px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sakshi Telugu News Article Card -->
+        <div class="press-article-card">
+          <div class="press-badge-header">
+            <span class="press-source-logo press-source-sakshi"><i class="fas fa-newspaper"></i> సాక్షి SAKSHI NEWS</span>
+            <span class="badge" style="background: #fff4eb; color: #f37021; font-size: 0.78rem;">Leading Telugu Daily</span>
+          </div>
+          <div class="press-body">
+            <h3 style="font-size: 1.3rem; color: var(--secondary); margin-bottom: 12px; line-height: 1.4;">
+              బడి పిల్లలకు ఉదయాన్నే పౌష్టికాహారం: లత మారవేణి సేవా ప్రస్థానం
+            </h3>
+            <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-main); margin-bottom: 15px;">
+              రాజన్న సిరిసిల్ల జిల్లా గంభీరావ్‌పేటకు చెందిన <strong>లత మారవేణి</strong>, భర్త శేఖర్ మారవేణి సహకారంతో ప్రభుత్వ ప్రాథమిక పాఠశాలల్లోని పేద పిల్లలకు ఉదయం అల్పాహారం, పాలు అందిస్తూ ఆకలిని దూరం చేస్తున్నారు. అల్వాల్, యాప్రాల్ ప్రాంతాల్లో ప్రారంభమైన ఈ మహత్తర సేవ వేలాది మంది చిన్నారులకు అండగా నిలుస్తోంది.
+            </p>
+            <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
+              <a href="https://www.sakshi.com/telugu-news/family/start-school-breakfast-latha-maraveni-latha-maraveni-1443149" target="_blank" class="btn btn-outline btn-sm" style="color: #f37021; border-color: #f37021; flex: 1; text-align: center;"><i class="fas fa-newspaper"></i> Read on Sakshi News <i class="fas fa-external-link-alt" style="font-size: 0.72rem; margin-left: 4px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founder Profile Card with Authentic Photo -->
+        <div class="press-article-card" style="background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%); display: flex; flex-direction: column;">
+          <div class="press-badge-header" style="background: transparent;">
+            <span class="press-source-logo" style="color: #0077b5;"><i class="fab fa-linkedin"></i> LEADERSHIP SPOTLIGHT</span>
+            <span class="badge" style="background: #e1f0ff; color: #0077b5; font-size: 0.78rem;">Executive Profile</span>
+          </div>
+          <div style="padding: 0 24px;">
+            <div style="display: flex; align-items: center; gap: 18px; margin-top: 10px;">
+              <div style="width: 84px; height: 84px; border-radius: 50%; overflow: hidden; border: 3px solid var(--primary); box-shadow: var(--shadow-sm); flex-shrink: 0;">
+                <img src="assets/images/founder-ceo-latha-maraveni.jpg" alt="Latha Maraveni - Founder & CEO" style="width: 100%; height: 100%; object-fit: cover; object-position: 40% 18%;">
+              </div>
+              <div>
+                <h3 style="font-size: 1.25rem; color: var(--secondary); margin-bottom: 4px; line-height: 1.3;">
+                  Latha Maraveni
+                </h3>
+                <span class="badge" style="background: #e0f2fe; color: #0369a1; font-size: 0.75rem; font-weight: 700;">CEO & Founder</span>
+              </div>
+            </div>
+          </div>
+          <div class="press-body">
+            <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-main); margin-bottom: 15px;">
+              Leading social-impact initiatives, child education drives, women empowerment workshops, and corporate CSR collaborations that create measurable, sustainable transformations across Telangana and nationwide.
+            </p>
+            <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
+              <a href="about.html#leadership-note" class="btn btn-outline btn-sm"><i class="fas fa-user-tie"></i> Read CEO Note</a>
+              <a href="https://in.linkedin.com/in/latha-maraveni-44308a165" target="_blank" class="btn btn-primary btn-sm" style="background: #0077b5; border-color: #0077b5;"><i class="fab fa-linkedin-in"></i> LinkedIn Profile</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Ground Action & Documentary Video Gallery (Interactive Modal Player) -->
+  <section class="section-padding" style="background-color: var(--bg-warm);" id="video-gallery">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Ground Action & Field Documentaries</h2>
+        <p class="section-desc">Click any video below to watch the ground action directly on this page.</p>
+      </div>
+
+      <div class="video-stream-section-wrap">
+        <!-- Floating Side Navigation Arrows -->
+        <button class="video-nav-btn video-prev-btn" aria-label="Previous Video"><i class="fas fa-chevron-left"></i></button>
+        <button class="video-nav-btn video-next-btn" aria-label="Next Video"><i class="fas fa-chevron-right"></i></button>
+
+        <div class="video-carousel-container">
+          <div class="video-carousel-track">
+            <!-- Video Card 1 -->
+            <div class="video-stream-card" onclick="openVideoModal('GFpZqW8Y1V8', 'Morning Nutrition & 150ml Milk Aid in Govt Schools', 'Vanitha TV')">
+              <div class="video-thumb-wrap" style="cursor: pointer;">
+                <img src="https://img.youtube.com/vi/GFpZqW8Y1V8/hqdefault.jpg" alt="Morning Nutrition & Milk Distribution" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/classroom-notebooks-students.jpg'">
+                <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="video-stream-body">
+                <span class="video-stream-tag"><i class="fas fa-tint"></i> Nityapalamrutam • Vanitha TV</span>
+                <h4 class="video-stream-title">Morning Nutrition & Pure Milk Distribution in Govt Schools</h4>
+                <p class="video-stream-desc">Delivering daily 150ml nutritious milk and breakfast to eliminate chronic hunger and power young minds for classroom learning.</p>
+                <span class="video-stream-link"><i class="fas fa-play-circle"></i> Watch Video Document</span>
+              </div>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="video-stream-card" onclick="openVideoModal('VczlR0_3lSI', 'Govt School Infrastructure & Classroom Beautification', 'hmtv News')">
+              <div class="video-thumb-wrap" style="cursor: pointer;">
+                <img src="https://img.youtube.com/vi/VczlR0_3lSI/hqdefault.jpg" alt="School Renovation & Painting" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/classroom-distribution-1.jpg'">
+                <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="video-stream-body">
+                <span class="video-stream-tag"><i class="fas fa-school"></i> Project 01 • hmtv News</span>
+                <h4 class="video-stream-title">Government School Infrastructure & Classroom Beautification</h4>
+                <p class="video-stream-desc">Volunteers transforming old, dilapidated school buildings into clean, joyful, vibrant learning spaces with modern sanitation.</p>
+                <span class="video-stream-link"><i class="fas fa-play-circle"></i> Watch Video Document</span>
+              </div>
+            </div>
+
+            <!-- Video Card 3 -->
+            <div class="video-stream-card" onclick="openVideoModal('FXvdf0cK0Ng', 'Free School Bags, Notebooks & Stationery Distribution', 'Kakatiya TV')">
+              <div class="video-thumb-wrap" style="cursor: pointer;">
+                <img src="https://img.youtube.com/vi/FXvdf0cK0Ng/hqdefault.jpg" alt="School Kits & Stationery Distribution" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/classroom-notebooks-students.jpg'">
+                <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="video-stream-body">
+                <span class="video-stream-tag"><i class="fas fa-book"></i> Project 02 • Kakatiya TV</span>
+                <h4 class="video-stream-title">Free School Bags, Notebooks & Stationery Distribution</h4>
+                <p class="video-stream-desc">Equipping every underprivileged child with essential educational kits, uniforms, notebooks, and writing materials.</p>
+                <span class="video-stream-link"><i class="fas fa-play-circle"></i> Watch Video Document</span>
+              </div>
+            </div>
+
+            <!-- Video Card 4 -->
+            <div class="video-stream-card" onclick="openVideoModal('tF_bCGXZY4Y', 'Skill Development & Digital Literacy for Govt School Kids', 'ETV News')">
+              <div class="video-thumb-wrap" style="cursor: pointer;">
+                <img src="https://img.youtube.com/vi/tF_bCGXZY4Y/hqdefault.jpg" alt="Student Skill Development & Digital Learning" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/classroom-volunteers-students.jpg'">
+                <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="video-stream-body">
+                <span class="video-stream-tag"><i class="fas fa-laptop-code"></i> Project 03 • ETV News</span>
+                <h4 class="video-stream-title">Skill Development & Digital Literacy for Govt School Kids</h4>
+                <p class="video-stream-desc">Interactive digital learning sessions, computer literacy workshops, and life skills coaching for high school students.</p>
+                <span class="video-stream-link"><i class="fas fa-play-circle"></i> Watch Video Document</span>
+              </div>
+            </div>
+
+            <!-- Video Card 5 -->
+            <div class="video-stream-card" onclick="openVideoModal('a2jBeFwMCTw', 'Spreading Smiles: Weekend Volunteering in Action', 'White Volunteers Foundation')">
+              <div class="video-thumb-wrap" style="cursor: pointer;">
+                <img src="https://img.youtube.com/vi/a2jBeFwMCTw/hqdefault.jpg" alt="Youth Volunteers in Action" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/volunteers-children-community-hall.jpg'">
+                <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="video-stream-body">
+                <span class="video-stream-tag"><i class="fas fa-heart"></i> Volunteer Spotlight</span>
+                <h4 class="video-stream-title">Spreading Smiles: Weekend Volunteering in Action</h4>
+                <p class="video-stream-desc">Highlights of youth volunteers distributing nutrition, conducting extracurricular fun activities, and mentoring students.</p>
+                <span class="video-stream-link"><i class="fas fa-play-circle"></i> Watch Video Document</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-carousel-controls">
+          <div class="video-carousel-dots"></div>
+          <button class="btn btn-primary btn-sm" onclick="openDonateModal(1000, 'Support Ground Documentaries')"><i class="fas fa-heart"></i> Support Our Media & Field Work (80G)</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Official Ground Action Photographs & Campaigns -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Field Action Photographs</h2>
+        <p class="section-desc">Authentic moments from our school visits, stationery distribution drives, and volunteer engagements. Click any image to view details.</p>
+      </div>
+
+      <div class="infinite-photo-strip-section" id="mediaPhotoCarouselSection">
+        <button class="photo-nav-btn photo-prev-btn" id="mediaPhotoPrev" aria-label="Previous Photo"><i class="fas fa-chevron-left"></i></button>
+        <button class="photo-nav-btn photo-next-btn" id="mediaPhotoNext" aria-label="Next Photo"><i class="fas fa-chevron-right"></i></button>
+        <div class="infinite-photo-track">
+          
+          <!-- Card 1 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/foundation-inauguration-ceremony.jpg', 'Official Foundation Initiative Inauguration', 'Founder &amp; CEO Latha Maraveni, Shekhar Maraveni, and officials launching educational development and school support programs in Telangana.', 'Official Milestone')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/foundation-inauguration-ceremony.jpg" alt="Foundation Initiative Inauguration Ceremony" loading="lazy" style="object-position: center 20%;">
+            </div>
+            <div class="infinite-photo-caption">Foundation Initiative Inauguration</div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/latha-maraveni-govt-school-students.jpg', 'CEO Latha Maraveni with Government School Students', 'Visiting Lothukunta Government Primary &amp; High School (Malkajgiri, Telangana) to support classroom education and child welfare.', 'School Adoption')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/latha-maraveni-govt-school-students.jpg" alt="CEO Latha Maraveni with Government School Students" loading="lazy" style="object-position: center 65%;">
+            </div>
+            <div class="infinite-photo-caption">Govt School Mentorship Visit</div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/volunteers-children-community-hall.jpg', 'Community Celebration &amp; Greetings Workshop', 'Volunteers and children celebrating with handmade cards and educational workshops.', 'Community Seva')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/volunteers-children-community-hall.jpg" alt="Volunteers and children celebration" loading="lazy">
+            </div>
+            <div class="infinite-photo-caption">Community Celebration Workshop</div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/school-children-classroom-collage.jpg', 'Classroom Mentorship &amp; Joyful Learning', 'School children smiling in classroom with notebooks and stationery supplies.', 'Classroom Mentorship')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/school-children-classroom-collage.jpg" alt="School children smiling in classroom" loading="lazy">
+            </div>
+            <div class="infinite-photo-caption">Classroom Mentorship &amp; Learning</div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/community-connect-internship-activity.jpg', 'Nutrition &amp; Joyful Engagement Drives', 'Snack distribution and interactive games with youth volunteers in Telangana.', 'Youth Engagement')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/community-connect-internship-activity.jpg" alt="Snack distribution and games with youth volunteers" loading="lazy">
+            </div>
+            <div class="infinite-photo-caption">Nutrition &amp; Joyful Drives</div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/classroom-distribution-1.jpg', 'Govt School Infrastructure &amp; Classroom Renovation', 'Transforming classrooms with fresh paint, dual desks, and bright educational artwork.', 'School Renovation')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/classroom-distribution-1.jpg" alt="Classroom Support &amp; Renovation" loading="lazy">
+            </div>
+            <div class="infinite-photo-caption">School Infrastructure Support</div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/classroom-notebooks-students.jpg', 'Notebooks &amp; Learning Stationery Distribution', 'Equipping students with essential notebooks, geometry boxes, and educational materials.', 'Stationery Aid')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/classroom-notebooks-students.jpg" alt="Notebooks and learning kits distribution" loading="lazy">
+            </div>
+            <div class="infinite-photo-caption">Notebooks &amp; Kits Distribution</div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/happy-students-thumbs-up.jpg', 'Student Mentoring &amp; Encouragement', 'Building confidence and joyful learning pathways for every child.', 'Student Mentorship')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/happy-students-thumbs-up.jpg" alt="Empowering Young Students" loading="lazy">
+            </div>
+            <div class="infinite-photo-caption">Student Mentoring &amp; Hope</div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/classroom-volunteers-students.jpg', 'Interactive Digital &amp; Classroom Sessions', 'Volunteers mentoring children with interactive computer sessions and digital learning modules.', 'Digital Literacy')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/classroom-volunteers-students.jpg" alt="Interactive Digital and Learning Sessions" loading="lazy">
+            </div>
+            <div class="infinite-photo-caption">Digital &amp; Classroom Sessions</div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/volunteer-school-children-outdoors.jpg', 'Community Outreach &amp; Outdoor Activities', 'Promoting sports, interactive games, and community environmental awareness.', 'Community Seva')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/volunteer-school-children-outdoors.jpg" alt="Outdoor Learning and Community Engagement" loading="lazy">
+            </div>
+            <div class="infinite-photo-caption">Community Outreach Activities</div>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/school-girls-thumbs-up-outdoors.jpg', 'Girls Education &amp; Community Upliftment', 'Empowering girl children with education support and life-skills awareness.', 'Girls Education')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/school-girls-thumbs-up-outdoors.jpg" alt="Girls Education &amp; Community Upliftment" loading="lazy">
+            </div>
+            <div class="infinite-photo-caption">Girls Education &amp; Upliftment</div>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="infinite-photo-card" onclick="openPosterModal('assets/images/volunteer-students-classroom-selfie.jpg', 'Youth Volunteers &amp; Students Bonding', 'Volunteers connecting with school children creating lifelong memories of joy and mentorship.', 'Volunteer Seva')">
+            <div class="infinite-photo-img-wrap">
+              <img src="assets/images/volunteer-students-classroom-selfie.jpg" alt="Youth Volunteers and Students Bonding" loading="lazy">
+            </div>
+            <div class="infinite-photo-caption">Youth Volunteers &amp; Students</div>
+          </div>
+
+        </div>
+        <div class="photo-carousel-dots" id="mediaPhotoDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, #0c4fa8 100%); color: #ffffff; padding: 70px 0; text-align: center;">
+    <div class="container">
+      <h2 style="color: #ffffff; font-size: 2.4rem; font-weight: 800; margin-bottom: 15px;">Empowering Children. Transforming Communities.</h2>
+      <p style="color: rgba(255, 255, 255, 0.95); max-width: 760px; margin: 0 auto 30px; font-size: 1.1rem; line-height: 1.7;">
+        Partner with us or volunteer your weekend to make a direct impact on children in government schools.
+      </p>
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <button class="btn btn-white btn-lg" style="background: #ffffff; color: var(--primary); font-weight: 700;" onclick="openVolunteerModal('Media Bottom CTA')"><i class="fas fa-user-plus"></i> Register as Volunteer</button>
+        <button class="btn btn-outline btn-lg" style="border-color: #ffffff; color: #ffffff;" onclick="openDonateModal(1000, 'Support Ground Action (80G)')"><i class="fas fa-heart"></i> Donate (80G Exemption)</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-brand-logo-wrap">
+              <img src="assets/images/logo.png" alt="White Volunteer's Foundation" class="footer-brand-logo-img">
+            </a>
+            <p>Empowering children, youth, and communities in India through education, nutrition aid, healthcare, and social service.</p>
+
+            <!-- Technology & Digital Partner -->
+            <div class="footer-tech-partner-card">
+              <div class="footer-tech-partner-label">Technology &amp; Digital Partner</div>
+              <a href="https://raambow.com" target="_blank" rel="noopener" class="dev-brand-badge-lg" title="RaamBow TechSolutions - Digital Partner">
+                <img src="assets/images/raambow-techsolutions-logo.png" alt="RaamBow TechSolutions" class="dev-brand-logo-lg">
+              </a>
+              <div style="font-size: 0.74rem; color: #94a3b8; font-weight: 500;">Digital Transformation &amp; Web Partner</div>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+              <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+              <li><a href="programs.html"><i class="fas fa-angle-right"></i> Our 5 Key Projects</a></li>
+              <li><a href="media.html"><i class="fas fa-angle-right"></i> Media & Videos</a></li>
+              <li><a href="newsletter.html"><i class="fas fa-angle-right"></i> Newsletter (Vol-1)</a></li>
+              <li><a href="donate.html"><i class="fas fa-angle-right"></i> Donate Online</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Featured In News</h4>
+            <ul class="footer-links">
+              <li><a href="https://timesofindia.indiatimes.com/city/hyderabad/officers-initiative-provides-nutrition-to-3k-students/amp_articleshow/116662040.cms" target="_blank"><i class="fas fa-angle-right"></i> Times of India (3k Nutrition)</a></li>
+              <li><a href="https://www.sakshi.com/telugu-news/family/start-school-breakfast-latha-maraveni-latha-maraveni-1443149" target="_blank"><i class="fas fa-angle-right"></i> Sakshi Feature (Latha Maraveni)</a></li>
+              <li><a href="https://in.linkedin.com/in/latha-maraveni-44308a165" target="_blank"><i class="fas fa-angle-right"></i> LinkedIn Leadership</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>National HQ</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>#10-551, Nagaram, Keesara, Medchal Dist., Telangana - 500083</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span><a href="tel:+919100894893" style="color: inherit;">+91 91008 94893</a> / <a href="tel:+918400996611" style="color: inherit;">84009 96611</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span><a href="mailto:founderwvfindia@wvfindia.org" style="color: inherit;">founderwvfindia@wvfindia.org</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div>&copy; 2025–2026 White Volunteers Foundation NGO. All Rights Reserved.</div>
+        <div><a href="contact.html">Privacy Policy</a> | <a href="contact.html">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="videoModalTitle"><i class="fab fa-youtube" style="color: #ff0000;"></i> Video Documentary</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="video-modal-wrap" id="videoPlayerWrap"></div>
+        <p id="videoModalDesc" style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0;"></p>
+      </div>
+      <div class="modal-footer">
+        <a id="videoModalDirectLink" href="https://www.youtube.com/@WhiteVolunteersFoundation" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-youtube"></i> Watch on YouTube</a>
+        <button class="btn btn-primary btn-sm" onclick="closeAllModals()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pure Full-View Poster Lightbox Modal (No Text, Pure Image) -->
+  <div class="modal-overlay poster-lightbox-overlay" id="posterModal" onclick="if(event.target === this) closeAllModals()">
+    <button class="poster-lightbox-close" onclick="closeAllModals()" aria-label="Close Lightbox">&times;</button>
+    <div class="poster-lightbox-container">
+      <img src="" alt="Campaign Poster" id="posterModalImg" class="poster-lightbox-img">
+      <div class="poster-lightbox-actions" id="posterModalActions"></div>
+    </div>
+  </div>
+
+  <!-- Modals (Global Interactive System) -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="projectModalTitle">Project Details</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="projectModalBody"></div>
+      <div class="modal-footer" id="projectModalFooter"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="detailsModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="detailsModalTitle">Details</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="detailsModalBody"></div>
+      <div class="modal-footer" id="detailsModalFooter">
+        <button class="btn btn-outline" onclick="closeAllModals()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="videoModalTitle"><i class="fab fa-youtube" style="color: #ff0000;"></i> Video Documentary</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="video-modal-wrap" id="videoPlayerWrap"></div>
+        <p id="videoModalDesc" style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0;"></p>
+      </div>
+      <div class="modal-footer">
+        <a id="videoModalDirectLink" href="https://www.youtube.com/@WhiteVolunteersFoundation" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-youtube"></i> Watch on YouTube</a>
+        <button class="btn btn-primary btn-sm" onclick="closeAllModals()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="volunteerModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Volunteer Registration Form</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="handleVolunteerSubmit(event)">
+          <div class="form-group">
+            <label for="volName">Full Name *</label>
+            <input type="text" id="volName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="volPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="volPhone" class="form-control" placeholder="+91 91008 94893" required>
+            </div>
+            <div class="form-group">
+              <label for="volEmail">Email *</label>
+              <input type="email" id="volEmail" class="form-control" placeholder="rahul@example.com" required>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="volCity">Your City *</label>
+              <input type="text" id="volCity" class="form-control" placeholder="Hyderabad" required>
+            </div>
+            <div class="form-group">
+              <label for="volDomain">Area of Interest *</label>
+              <select id="volDomain" class="form-control">
+                <option value="1. School Renovation & Infrastructure">1. School Renovation & Infrastructure</option>
+                <option value="2. Stationery & Learning Materials">2. Stationery & Learning Materials</option>
+                <option value="3. Skill Development for Students">3. Student Skill Development</option>
+                <option value="4. Digital Library in Govt Schools">4. Digital Library in Schools</option>
+                <option value="5. Women Empowerment">5. Women Empowerment</option>
+                <option value="Community Connect Internship">Community Connect Internship</option>
+                <option value="Weekend School Seva">Weekend School Seva</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; margin-top: 10px;">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="donateModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Support White Volunteers Foundation</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 1.2rem;">
+          <span class="badge" style="background: #f0fdf4; color: #15803d; font-weight: 700; font-size: 0.82rem; margin-bottom: 6px;">80G TAX EXEMPTION BENEFIT</span>
+          <h4 style="color: var(--secondary); font-size: 1.2rem; margin-bottom: 4px;">Make an Instant Contribution</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Supporting: <strong id="donateModalCause" style="color: var(--primary);">Education & Nutrition Programs</strong></p>
+        </div>
+
+        <div class="payment-card" style="padding: 20px; box-shadow: none; border: 1px solid #e2e8f0; border-radius: 14px; margin-bottom: 15px;">
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--secondary); margin-bottom: 8px;">
+            <i class="fas fa-qrcode" style="color: #5f259f;"></i> Scan Official PhonePe QR Code:
+          </div>
+          <div style="text-align: center; margin-bottom: 12px;">
+            <img src="assets/images/phonepe-donation-qr.jpg" alt="White Volunteers Foundation PhonePe QR" style="max-width: 200px; height: auto; border-radius: 10px; border: 1px solid #e2e8f0; margin: 0 auto; display: block;" onerror="this.src='assets/images/logo.png'">
+          </div>
+          <div style="background: #f8fafc; padding: 10px 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>UPI ID: <strong>urbandonors@ybl</strong></span>
+            <button class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.78rem;" onclick="copyToClipboard('urbandonors@ybl', 'UPI ID')"><i class="fas fa-copy"></i> Copy</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeAllModals()">Close</button>
+        <a href="donate.html" class="btn btn-primary"><i class="fas fa-receipt"></i> Full 80G Page</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

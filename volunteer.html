@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Portal & Community Connect Internship | White Volunteers Foundation</title>
+  <meta name="description" content="Join White Volunteers Foundation as a volunteer or intern. Flexible weekend seva, Community Connect Internship in Hyderabad, and skill mentorship across India.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  
+  <!-- Google Fonts (Poppins: 400, 500, 600, 700, 800) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
+  <style>
+    @media (max-width: 1260px) {
+      .nav-menu, .nav-menu * {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+      .header-actions .btn-outline {
+        display: none !important;
+      }
+      .mobile-toggle {
+        display: flex !important;
+      }
+    }
+  </style>
+
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  </script>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-container">
+      <div class="topbar-group">
+        <span class="topbar-item"><i class="fas fa-map-marker-alt"></i> HQ: Greater Hyderabad, Telangana - 500083</span>
+        <span class="topbar-sep">&bull;</span>
+        <span class="topbar-item"><i class="fas fa-envelope"></i> <a href="mailto:founderwvfindia@wvfindia.org">founderwvfindia@wvfindia.org</a></span>
+      </div>
+
+      <div class="topbar-group">
+        <span class="topbar-item"><i class="fas fa-phone-alt"></i> <a href="tel:+919100894893">+91 91008 94893</a> / <a href="tel:+918400996611">84009 96611</a> / <a href="tel:+919186211983">91862 11983</a></span>
+        <span class="topbar-sep">&bull;</span>
+        <div class="topbar-socials">
+          <a href="https://www.facebook.com/www.wvfindia.org?mibextid=rS40aB7S9Ucbxw6v" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/p/DHYTIrJPWHr/?igsh=NXNieDFqODU4czhj" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://in.linkedin.com/in/latha-maraveni-44308a165" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="index.html" class="logo-container" aria-label="White Volunteers Foundation Home">
+          <img src="assets/images/logo.png" alt="White Volunteer's Foundation" class="brand-logo-img">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <!-- Get Involved Dropdown -->
+          <li class="nav-item has-mega-menu">
+            <a href="volunteer.html" class="nav-link active">Get Involved <i class="fas fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-menu-grid">
+                  <div>
+                    <h4 class="mega-col-title">Volunteering Tracks</h4>
+                    <ul class="mega-list">
+                      <li><a href="volunteer.html#community-internship">Community Connect Internship</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('Weekend Seva')">Weekend School Seva</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('Skill Mentorship')">Student Skill Mentorship</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('School Kit Drive')">School Kit Donation Drive</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Partnerships</h4>
+                    <ul class="mega-list">
+                      <li><a href="programs.html">Corporate CSR Collaborations</a></li>
+                      <li><a href="about.html#values">Institutional Partnerships</a></li>
+                      <li><a href="about.html#impact-approach">Our Grassroots Approach</a></li>
+                      <li><a href="contact.html">Partner With Us</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Giving & Impact</h4>
+                    <ul class="mega-list">
+                      <li><a href="donate.html">Online Donation (80G Exemption)</a></li>
+                      <li><a href="donate.html#payment-portal">Scan PhonePe QR</a></li>
+                      <li><a href="newsletter.html">Foundation Newsletter Vol-1</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-cta-card">
+                    <h4>Make a Difference</h4>
+                    <p>Join over 12,500 active volunteers today!</p>
+                    <button class="btn btn-primary btn-sm" onclick="openVolunteerModal('Header Menu Signup')"><i class="fas fa-user-plus"></i> Join as Volunteer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Programs Dropdown -->
+          <li class="nav-item has-mega-menu">
+            <a href="programs.html" class="nav-link">Programs <i class="fas fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-menu-grid">
+                  <div>
+                    <h4 class="mega-col-title">5 Key Projects</h4>
+                    <ul class="mega-list">
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(1)">1. School Renovation</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(2)">2. Stationery Distribution</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(3)">3. Student Skill Development</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(4)">4. Digital Library in Schools</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(5)">5. Women Empowerment</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Flagship Drives</h4>
+                    <ul class="mega-list">
+                      <li><a href="newsletter.html#nityapalamrutam">Nityapalamrutam Milk Aid</a></li>
+                      <li><a href="newsletter.html#vastradaan">Vastradaan Clothing Drive</a></li>
+                      <li><a href="newsletter.html#bhuddhishakti">Bhuddhishakti Scholarships</a></li>
+                      <li><a href="newsletter.html#brainybirds">#BRAINYBIRDS School Seva</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Special Campaigns</h4>
+                    <ul class="mega-list">
+                      <li><a href="volunteer.html#internship">Community Connect Internship</a></li>
+                      <li><a href="javascript:void(0)" onclick="openDonateModal(200, 'Education Today - 500 Children')">Education Today Campaign</a></li>
+                      <li><a href="programs.html">View All Flagship Programs</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-cta-card">
+                    <h4 style="color: var(--primary);">Support A Child</h4>
+                    <p>Sponsor a child's complete school stationery kit for only ₹200.</p>
+                    <button class="btn btn-primary btn-sm" onclick="openDonateModal(200, 'Sponsor a Child')"><i class="fas fa-heart"></i> Donate ₹200</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Media & Videos Link -->
+          <li class="nav-item">
+            <a href="media.html" class="nav-link">Media & Videos</a>
+          </li>
+
+          <!-- News & Stories Dropdown -->
+          <li class="nav-item">
+            <a href="newsletter.html" class="nav-link">News & Stories <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="newsletter.html" class="dropdown-item">Foundation Newsletter (Vol-1)</a></li>
+              <li><a href="media.html" class="dropdown-item">Video Documentaries & Ground Action</a></li>
+              <li><a href="https://www.sakshi.com/telugu-news/family/start-school-breakfast-latha-maraveni-latha-maraveni-1443149" target="_blank" class="dropdown-item">Sakshi News Story</a></li>
+            </ul>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html#story" class="dropdown-item">Our Story & Journey</a></li>
+              <li><a href="about.html#leadership-note" class="dropdown-item">Message from the CEO</a></li>
+              <li><a href="about.html#impact-approach" class="dropdown-item">Our Grassroots Approach</a></li>
+              <li><a href="about.html#values" class="dropdown-item">Our 6 Core Values</a></li>
+            </ul>
+          </li>
+
+          <!-- Contact Us Link -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- Right Side Action Buttons -->
+        <div class="header-actions">
+          <a href="#volunteer-form" class="btn btn-outline btn-sm">Join us</a>
+          <button class="btn btn-primary btn-sm" onclick="openDonateModal(1000, 'Volunteer Portal')"><i class="fas fa-heart"></i> Donate</button>
+          <button class="mobile-toggle" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. Mobile Off-Canvas Drawer (Rich, Interactive Navigation)
+       ========================================================================= -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo-container" aria-label="White Volunteers Foundation">
+        <img src="assets/images/logo.png" alt="White Volunteers Foundation" style="height: 48px; border-radius: 6px;">
+      </a>
+      <button class="drawer-close" aria-label="Close Navigation"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li>
+        <a href="index.html" class="mobile-nav-link">
+          <span><i class="fas fa-home mobile-nav-icon"></i> Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="volunteer.html" class="mobile-nav-link active">
+          <span><i class="fas fa-hands-helping mobile-nav-icon"></i> Get Involved</span>
+        </a>
+      </li>
+      <li class="mobile-has-sub">
+        <div class="mobile-link-row">
+          <a href="programs.html" class="mobile-nav-link">
+            <span><i class="fas fa-graduation-cap mobile-nav-icon"></i> Programs</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle Programs Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="programs.html#breakfast"><i class="fas fa-utensils"></i> Free Breakfast Seva</a></li>
+          <li><a href="programs.html#studyhours"><i class="fas fa-book-reader"></i> Evening Study Hours</a></li>
+          <li><a href="newsletter.html#vastradaan"><i class="fas fa-tshirt"></i> Vastradaan Clothes</a></li>
+          <li><a href="newsletter.html#bhuddhishakti"><i class="fas fa-award"></i> Bhuddhishakti Awards</a></li>
+          <li><a href="newsletter.html#brainybirds"><i class="fas fa-dove"></i> #BRAINYBIRDS Seva</a></li>
+          <li><a href="programs.html"><i class="fas fa-arrow-right"></i> View All 5 Programs</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="media.html" class="mobile-nav-link">
+          <span><i class="fas fa-photo-video mobile-nav-icon"></i> Media & Videos</span>
+        </a>
+      </li>
+      <li class="mobile-has-sub">
+        <div class="mobile-link-row">
+          <a href="newsletter.html" class="mobile-nav-link">
+            <span><i class="fas fa-newspaper mobile-nav-icon"></i> News & Stories</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle Stories Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="newsletter.html"><i class="fas fa-file-alt"></i> Foundation Newsletter (Vol-1)</a></li>
+          <li><a href="media.html"><i class="fas fa-video"></i> Video Documentaries</a></li>
+          <li><a href="https://timesofindia.indiatimes.com/city/hyderabad/officers-initiative-provides-nutrition-to-3k-students/amp_articleshow/116662040.cms" target="_blank"><i class="fas fa-external-link-alt"></i> Times of India National Feature</a></li>
+          <li><a href="https://www.sakshi.com/telugu-news/family/start-school-breakfast-latha-maraveni-latha-maraveni-1443149" target="_blank"><i class="fas fa-external-link-alt"></i> Sakshi News Story</a></li>
+        </ul>
+      </li>
+      <li class="mobile-has-sub">
+        <div class="mobile-link-row">
+          <a href="about.html" class="mobile-nav-link">
+            <span><i class="fas fa-users mobile-nav-icon"></i> About Us</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle About Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="about.html#story"><i class="fas fa-heart"></i> Our Story & Journey</a></li>
+          <li><a href="about.html#leadership-note"><i class="fas fa-user-tie"></i> Message from the CEO</a></li>
+          <li><a href="about.html#impact-approach"><i class="fas fa-seedling"></i> Grassroots Approach</a></li>
+          <li><a href="about.html#values"><i class="fas fa-check-circle"></i> Our 6 Core Values</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="contact.html" class="mobile-nav-link">
+          <span><i class="fas fa-phone-alt mobile-nav-icon"></i> Contact Us</span>
+        </a>
+      </li>
+    </ul>
+    <div class="drawer-footer">
+      <button class="btn btn-primary" style="width: 100%; border-radius: 50px; font-weight: 700; padding: 12px;" onclick="openDonateModal(1000, 'Mobile Drawer')"><i class="fas fa-heart"></i> Donate Now</button>
+      <button class="btn btn-outline" style="width: 100%; border-radius: 50px; font-weight: 600; padding: 10px;" onclick="openVolunteerModal('Mobile Drawer')"><i class="fas fa-user-plus"></i> Join as Volunteer</button>
+      <div class="drawer-quick-contact">
+        <a href="tel:+919100894893" class="quick-contact-btn"><i class="fas fa-phone-alt"></i> Call Us</a>
+        <a href="https://wa.me/919100894893" target="_blank" class="quick-contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Banner -->
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, #0c4fa8 100%); color: #fff; padding: 4.5rem 0; text-align: center;">
+    <div class="container">
+      <h1 style="color: #ffffff; margin-bottom: 1rem; font-size: 2.6rem; font-weight: 800;">Our Volunteers Are Our Strength</h1>
+      <p style="color: rgba(255, 255, 255, 0.95); max-width: 780px; margin: 0 auto; font-size: 1.15rem; line-height: 1.6;">
+        They contribute their time, skills, ideas, energy, and compassion to support children, schools, women, and communities.
+      </p>
+    </div>
+  </section>
+
+  <!-- Volunteering Options & Application Form -->
+  <section class="section-padding" id="volunteer-form">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: flex-start;">
+        <!-- Left Column: Ways to Volunteer -->
+        <div>
+          <h2 class="section-title align-left">Turn Ideas Into Action</h2>
+          <p style="font-size: 1rem; line-height: 1.7; color: var(--text-main); margin-bottom: 1.5rem;">
+            From organizing educational programs to supporting school improvement projects, volunteers help turn ideas into action. Choose an area that aligns with your passion:
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <!-- Community Connect Internship Highlight -->
+            <div style="background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border-left: 4px solid #16a34a; padding: 1.5rem; border-radius: 14px; box-shadow: var(--shadow-sm); border: 1px solid #bbf7d0;">
+              <span style="color: #15803d; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; display: inline-block;">ACTIVE STUDENT INTERNSHIP</span>
+              <h4 style="color: #15803d; margin-bottom: 0.4rem; font-size: 1.15rem;">Community Connect Internship</h4>
+              <p style="font-size: 0.9rem; margin-bottom: 12px; color: var(--text-main); line-height: 1.6;">
+                Make a difference & gain real experience! Open to all undergraduate, postgraduate, and diploma students in Hyderabad passionate about community service.
+              </p>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <button class="btn btn-primary btn-sm" style="background: #16a34a; border-color: #16a34a;" onclick="openVolunteerModal('Community Connect Internship')">Apply for Internship</button>
+                <a href="tel:+919186211983" class="btn btn-outline btn-sm">Call: +91 91862 11983</a>
+              </div>
+            </div>
+
+            <div style="background: #fff; border-left: 4px solid var(--primary); padding: 1.25rem 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); border-left: 4px solid var(--primary);">
+              <h4 style="color: var(--primary); margin-bottom: 0.4rem;">1. School Renovation & Infrastructure</h4>
+              <p style="font-size: 0.9rem; margin-bottom: 0;">Help paint classrooms, repair facilities, set up child-friendly spaces, and create welcoming learning environments.</p>
+            </div>
+
+            <div style="background: #fff; border-left: 4px solid var(--accent); padding: 1.25rem 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); border-left: 4px solid var(--accent);">
+              <h4 style="color: var(--accent); margin-bottom: 0.4rem;">2. Stationery & Learning Materials</h4>
+              <p style="font-size: 0.9rem; margin-bottom: 0;">Organize and distribute notebooks, bags, stationery kits, and school uniforms to underprivileged children.</p>
+            </div>
+
+            <div style="background: #fff; border-left: 4px solid var(--secondary); padding: 1.25rem 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); border-left: 4px solid var(--secondary);">
+              <h4 style="color: var(--secondary); margin-bottom: 0.4rem;">3. Student Skill Development & Digital Library</h4>
+              <p style="font-size: 0.9rem; margin-bottom: 0;">Mentor students in digital literacy, communication, computer fundamentals, career awareness, and practical life skills.</p>
+            </div>
+
+            <div style="background: #fff; border-left: 4px solid var(--primary-dark); padding: 1.25rem 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); border-left: 4px solid var(--primary-dark);">
+              <h4 style="color: var(--primary-dark); margin-bottom: 0.4rem;">4. Women Empowerment & Training</h4>
+              <p style="font-size: 0.9rem; margin-bottom: 0;">Support vocational training, financial literacy sessions, entrepreneurship guidance, and women self-help initiatives.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Registration Form -->
+        <div style="background: #ffffff; padding: 2.5rem; border-radius: 20px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color);">
+          <div style="margin-bottom: 1.5rem;">
+            <h3 style="color: var(--dark); font-size: 1.5rem;">Join as a Volunteer / Apply for Internship</h3>
+            <p style="font-size: 0.88rem;">Fill out this form and our local chapter coordinator will connect with you for orientation.</p>
+          </div>
+
+          <form onsubmit="handleVolunteerSubmit(event)">
+            <div class="form-group">
+              <label for="regName">Full Name *</label>
+              <input type="text" id="regName" class="form-control" placeholder="e.g. Ramesh Reddy" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="regPhone">Mobile / WhatsApp *</label>
+                <input type="tel" id="regPhone" class="form-control" placeholder="+91 91008 94893" required>
+              </div>
+              <div class="form-group">
+                <label for="regEmail">Email Address *</label>
+                <input type="email" id="regEmail" class="form-control" placeholder="ramesh@example.com" required>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="regCity">City / Chapter *</label>
+                <select id="regCity" class="form-control" required>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Warangal">Warangal</option>
+                  <option value="Bengaluru">Bengaluru</option>
+                  <option value="Delhi-NCR">Delhi-NCR</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Visakhapatnam">Visakhapatnam</option>
+                  <option value="Ahmedabad">Ahmedabad</option>
+                  <option value="Nalgonda">Nalgonda</option>
+                  <option value="Bhubaneswar">Bhubaneswar</option>
+                  <option value="Patna (Bihar)">Patna (Bihar)</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Other City">Other / Start Chapter</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="regRole">Your Profession / Status *</label>
+                <select id="regRole" class="form-control" required>
+                  <option value="College Student">College Student</option>
+                  <option value="Working Professional">Working Professional</option>
+                  <option value="Teacher / Educator">Teacher / Educator</option>
+                  <option value="Homemaker">Homemaker</option>
+                  <option value="Social Worker">Social Worker</option>
+                  <option value="Senior Citizen / Retired">Senior Citizen / Retired</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="regInterest">Primary Interest Area *</label>
+              <select id="regInterest" class="form-control" required>
+                <option value="Community Connect Internship">Community Connect Internship (Hyderabad Students)</option>
+                <option value="School Renovation">1. School Renovation & Infrastructure</option>
+
+                <option value="Stationery Distribution">2. Stationery & Learning Materials</option>
+                <option value="Student Skill Mentorship">3. Student Skill Development</option>
+                <option value="Digital Library">4. Digital Library in Schools</option>
+                <option value="Women Empowerment">5. Women Empowerment</option>
+                <option value="Nityapalamrutam Milk Aid">Nityapalamrutam (Daily Milk Aid)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="regMsg">Why do you wish to volunteer / apply for internship? (Optional)</label>
+              <textarea id="regMsg" class="form-control" rows="3" placeholder="Tell us briefly about your college, degree, interests, or availability..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">
+              Complete Registration / Internship Application
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Connect Internship Showcase -->
+  <section id="community-internship" class="section-padding" style="background: linear-gradient(180deg, #f8fafc 0%, #f0fdf4 100%); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      
+      <div class="section-header text-center" style="max-width: 840px; margin: 0 auto 3rem auto;">
+        <h2 class="section-title" style="font-size: 2.3rem;">COMMUNITY CONNECT INTERNSHIP</h2>
+        <p class="section-desc" style="font-size: 1.15rem; color: var(--secondary); font-weight: 600;">
+          Make a Difference. Gain Real Experience. Open to all students in Hyderabad!
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: center; margin-bottom: 3.5rem;">
+        
+        <div style="text-align: center;">
+          <div style="background: #ffffff; padding: 16px; border-radius: 20px; box-shadow: 0 12px 35px rgba(0,0,0,0.12); border: 1px solid #e2e8f0; display: inline-block; max-width: 100%;">
+            <img src="assets/images/community-connect-internship-poster.jpg" alt="Community Connect Internship Official Poster - White Volunteers Foundation" style="width: 100%; max-width: 480px; height: auto; border-radius: 12px; display: block; object-fit: contain; cursor: pointer;" onclick="openPosterModal('assets/images/community-connect-internship-poster.jpg', 'Community Connect Internship', 'Make a difference and gain real experience. Open to all students in Hyderabad across all subjects.', 'Community Connect Internship')">
+            <div style="margin-top: 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+              <button class="btn btn-outline btn-sm" onclick="openPosterModal('assets/images/community-connect-internship-poster.jpg', 'Community Connect Internship', 'Make a difference and gain real experience. Open to all students in Hyderabad across all subjects.', 'Community Connect Internship')">
+                View Full Poster
+              </button>
+              <a href="assets/images/community-connect-internship-poster.jpg" download="Community_Connect_Internship_Poster.jpg" class="btn btn-primary btn-sm" style="background: #16a34a; border-color: #16a34a;">
+                Download Poster
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="background: #ffffff; padding: 2.2rem; border-radius: 18px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+            <h3 style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1.2rem;">
+              Why Join This Internship?
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.5rem;">
+              <div style="background: #f8fafc; padding: 14px; border-radius: 12px; border-left: 3px solid #16a34a;">
+                <div style="font-weight: 700; color: var(--secondary); font-size: 0.95rem; margin-bottom: 4px;">
+                  Fieldwork & Outreach
+                </div>
+                <div style="font-size: 0.84rem; color: var(--text-muted);">Work on impactful, real ground community & school projects.</div>
+              </div>
+
+              <div style="background: #f8fafc; padding: 14px; border-radius: 12px; border-left: 3px solid #2563eb;">
+                <div style="font-weight: 700; color: var(--secondary); font-size: 0.95rem; margin-bottom: 4px;">
+                  Certificate of Internship
+                </div>
+                <div style="font-size: 0.84rem; color: var(--text-muted);">Official verified certificate for your valuable social contribution.</div>
+              </div>
+
+              <div style="background: #f8fafc; padding: 14px; border-radius: 12px; border-left: 3px solid #d97706;">
+                <div style="font-weight: 700; color: var(--secondary); font-size: 0.95rem; margin-bottom: 4px;">
+                  Hands-on Experience
+                </div>
+                <div style="font-size: 0.84rem; color: var(--text-muted);">Gain practical exposure, leadership, and community skill building.</div>
+              </div>
+
+              <div style="background: #f8fafc; padding: 14px; border-radius: 12px; border-left: 3px solid #dc2626;">
+                <div style="font-weight: 700; color: var(--secondary); font-size: 0.95rem; margin-bottom: 4px;">
+                  Make an Impact
+                </div>
+                <div style="font-size: 0.84rem; color: var(--text-muted);">Directly contribute to children, schools & community transformation.</div>
+              </div>
+            </div>
+
+            <!-- Eligibility Banner -->
+            <div style="background: linear-gradient(135deg, #091e3e 0%, #1e3a8a 100%); color: #ffffff; padding: 16px 20px; border-radius: 14px; margin-bottom: 1.5rem;">
+              <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: #93c5fd; font-weight: 700; margin-bottom: 4px;">
+                Who Can Apply?
+              </div>
+              <div style="font-size: 1.15rem; font-weight: 800; color: #ffffff; margin-bottom: 4px;">
+                All Subjects | All Students
+              </div>
+              <div style="font-size: 0.88rem; color: #e2e8f0;">
+                Undergraduate, Postgraduate or Diploma in Hyderabad — Everyone is Welcome!
+              </div>
+            </div>
+
+            <!-- Direct Contact Info from Poster -->
+            <div style="background: #f1f5f9; padding: 16px 20px; border-radius: 14px; font-size: 0.9rem;">
+              <div style="font-weight: 700; color: var(--secondary); margin-bottom: 10px;">
+                Contact Coordinators:
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div><strong>Phone / WhatsApp:</strong> <a href="tel:+919186211983" style="color: var(--primary); font-weight: 700;">+91 91862 11983</a> / <a href="tel:+918400996611" style="color: var(--primary); font-weight: 700;">84009 96611</a></div>
+                <div><strong>Email:</strong> <a href="mailto:founderwvfindia@wvfindia.org" style="color: var(--primary); font-weight: 600;">founderwvfindia@wvfindia.org</a></div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="#volunteer-form" class="btn btn-primary" style="flex: 1; min-width: 200px; text-align: center; background: #16a34a; border-color: #16a34a;">
+                Apply for Internship Now
+              </a>
+              <a href="https://api.whatsapp.com/send?phone=918400996611&text=Hi%20White%20Volunteers%20Foundation,%20I%20am%20interested%20in%20the%20Community%20Connect%20Internship." target="_blank" class="btn btn-outline" style="min-width: 160px; text-align: center;">
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Youth Movement & Volunteer Posters Grid -->
+      <div style="margin-top: 3.5rem; margin-bottom: 3.5rem;">
+        <div class="section-header text-center" style="max-width: 800px; margin: 0 auto 2.5rem auto;">
+          <h3 style="font-size: 2rem; color: var(--secondary);">Be The Reason Someone Smiles</h3>
+          <p class="section-desc">Small actions lead to big impacts. Join White Volunteers Foundation — recognized as the <strong>Best NGO in Telangana State</strong>.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 2rem; align-items: stretch;">
+          
+          <!-- Poster 1: Best NGO in Telangana -->
+          <div style="background: #ffffff; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
+            <div style="background: #fff8f0; padding: 12px; text-align: center; cursor: pointer;" onclick="openPosterModal('assets/images/poster-best-ngo-telangana-be-the-change.jpg', 'Be The Change You Wish to See', 'Volunteer today, inspire tomorrow! Work across Education, Healthcare, Environment, Community & Youth Empowerment.', 'Best NGO Telangana Volunteer')">
+              <img src="assets/images/poster-best-ngo-telangana-be-the-change.jpg" alt="Best NGO in Telangana State - Be The Change" style="width: 100%; height: auto; border-radius: 12px; object-fit: contain; max-height: 460px;">
+            </div>
+            <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+              <span class="badge" style="background: #fef3c7; color: #b45309; font-size: 0.75rem; margin-bottom: 8px; width: fit-content;">State Recognition</span>
+              <h4 style="color: var(--secondary); font-size: 1.15rem; margin-bottom: 6px;">Be The Change You Wish to See!</h4>
+              <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                Volunteer today, inspire tomorrow! Work across Education, Healthcare, Environment, Community & Youth Empowerment.
+              </p>
+              <div style="margin-top: auto; display: flex; gap: 8px;">
+                <button class="btn btn-outline btn-sm" style="flex: 1;" onclick="openPosterModal('assets/images/poster-best-ngo-telangana-be-the-change.jpg', 'Be The Change You Wish to See', 'Volunteer today, inspire tomorrow!', 'Best NGO Telangana Volunteer')">View</button>
+                <a href="#volunteer-form" class="btn btn-primary btn-sm" style="flex: 1; text-align: center;">Join</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Poster 2: Your Scroll Can Wait -->
+          <div style="background: #ffffff; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
+            <div style="background: #f0fdf4; padding: 12px; text-align: center; cursor: pointer;" onclick="openPosterModal('assets/images/poster-your-scroll-can-wait.jpg', 'Your Scroll Can Wait, Someone\'s Future Can\'t!', 'Teach, Help, Plant, Lead, Create. No superpowers needed — just a good heart & little time! Helpline: 8400996611.', 'Youth Volunteer Hyderabad')">
+              <img src="assets/images/poster-your-scroll-can-wait.jpg" alt="Your Scroll Can Wait, Someone's Future Can't" style="width: 100%; height: auto; border-radius: 12px; object-fit: contain; max-height: 460px;">
+            </div>
+            <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+              <span class="badge" style="background: #dcfce7; color: #15803d; font-size: 0.75rem; margin-bottom: 8px; width: fit-content;">Youth Campaign</span>
+              <h4 style="color: var(--secondary); font-size: 1.15rem; margin-bottom: 6px;">Your Scroll Can Wait, Future Can't!</h4>
+              <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                Teach, Help, Plant, Lead, Create. No superpowers needed — just a good heart & little time! Helpline: <strong>8400996611</strong>.
+              </p>
+              <div style="margin-top: auto; display: flex; gap: 8px;">
+                <button class="btn btn-outline btn-sm" style="flex: 1;" onclick="openPosterModal('assets/images/poster-your-scroll-can-wait.jpg', 'Your Scroll Can Wait, Someone\'s Future Can\'t!', 'Teach, Help, Plant, Lead, Create. Helpline: 8400996611.', 'Youth Volunteer Hyderabad')">View</button>
+                <a href="tel:+918400996611" class="btn btn-primary btn-sm" style="flex: 1; text-align: center; background: #16a34a; border-color: #16a34a;">Call</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Poster 3: Be The Reason Someone Smiles -->
+          <div style="background: #ffffff; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
+            <div style="background: #fff1f2; padding: 12px; text-align: center; cursor: pointer;" onclick="openPosterModal('assets/images/poster-reason-someone-smiles.jpg', 'Be The Reason Someone Smiles', 'Netflix can wait, changing lives can\'t! Receive verified Internship Certificates, portfolio building, and fun events.', 'Community Connect Internship')">
+              <img src="assets/images/poster-reason-someone-smiles.jpg" alt="Be The Reason Someone Smiles Poster" style="width: 100%; height: auto; border-radius: 12px; object-fit: contain; max-height: 460px;">
+            </div>
+            <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
+              <span class="badge" style="background: #ffe4e6; color: #e11d48; font-size: 0.75rem; margin-bottom: 8px; width: fit-content;">Be A Changemaker</span>
+              <h4 style="color: var(--secondary); font-size: 1.15rem; margin-bottom: 6px;">Be The Reason Someone Smiles</h4>
+              <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                Netflix can wait, changing lives can't! Receive verified Internship Certificates, portfolio building, and fun events.
+              </p>
+              <div style="margin-top: auto; display: flex; gap: 8px;">
+                <button class="btn btn-outline btn-sm" style="flex: 1;" onclick="openPosterModal('assets/images/poster-reason-someone-smiles.jpg', 'Be The Reason Someone Smiles', 'Receive verified Internship Certificates.', 'Community Connect Internship')">View</button>
+                <a href="https://api.whatsapp.com/send?phone=918400996611&text=Hi%20White%20Volunteers%20Foundation,%20I%20want%20to%20volunteer!" target="_blank" class="btn btn-primary btn-sm" style="flex: 1; text-align: center; background: #25D366; border-color: #25D366;">Chat</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Ground Fieldwork Photos Showcase -->
+      <div style="background: #ffffff; padding: 2.2rem; border-radius: 18px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+        <div style="text-align: center; margin-bottom: 1.8rem;">
+          <h3 style="color: var(--secondary); font-size: 1.5rem;">Interns & Volunteers in Ground Action</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Authentic ground moments from our community sessions, school visits, and youth mentorship programs.</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          
+          <div style="border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0; cursor: pointer;" onclick="openPosterModal('assets/images/foundation-inauguration-ceremony.jpg', 'Official Foundation Initiative Inauguration Ceremony', 'Founder & CEO Latha Maraveni, Shekhar Maraveni, and government officials inaugurating school support programs.', 'Official Milestone')">
+            <img src="assets/images/foundation-inauguration-ceremony.jpg" alt="Foundation Initiative Inauguration Ceremony" style="width: 100%; height: 260px; object-fit: cover; object-position: center 20%;">
+            <div style="padding: 14px 16px; background: #f8fafc;">
+              <div style="font-weight: 700; color: var(--secondary); font-size: 0.92rem;">Official Foundation Initiative Inauguration</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Founder & CEO Latha Maraveni, Shekhar Maraveni, and officials launching educational programs.</div>
+            </div>
+          </div>
+
+          <div style="border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0; cursor: pointer;" onclick="openPosterModal('assets/images/latha-maraveni-govt-school-students.jpg', 'CEO Latha Maraveni with Government School Students', 'Visiting Lothukunta Government Primary & High School (Malkajgiri, Telangana) to mentor students and support classroom learning.', 'School Adoption')">
+            <img src="assets/images/latha-maraveni-govt-school-students.jpg" alt="CEO Latha Maraveni with Government School Students" style="width: 100%; height: 260px; object-fit: cover; object-position: center 65%;">
+            <div style="padding: 14px 16px; background: #f8fafc;">
+              <div style="font-weight: 700; color: var(--secondary); font-size: 0.92rem;">Govt School Mentorship Visit</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Visiting Lothukunta Government Primary & High School in Malkajgiri, Telangana.</div>
+            </div>
+          </div>
+
+          <div style="border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0; cursor: pointer;" onclick="openPosterModal('assets/images/volunteers-children-community-hall.jpg', 'Youth Volunteers & Children Celebration', 'Volunteers, college interns, and children showcasing handmade greeting cards and crafts in community hall.', 'Community Seva')">
+            <img src="assets/images/volunteers-children-community-hall.jpg" alt="Volunteers and children group photo in community hall" style="width: 100%; height: 260px; object-fit: cover;">
+            <div style="padding: 14px 16px; background: #f8fafc;">
+              <div style="font-weight: 700; color: var(--secondary); font-size: 0.92rem;">Youth Volunteers & Children Celebration</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Volunteers, college interns, and children showcasing handmade greeting cards and crafts.</div>
+            </div>
+          </div>
+
+          <div style="border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0; cursor: pointer;" onclick="openPosterModal('assets/images/school-children-classroom-collage.jpg', 'Classroom Joy & School Engagement', 'Coordinators mentoring students in classrooms and supporting school attendance.', 'School Mentorship')">
+            <img src="assets/images/school-children-classroom-collage.jpg" alt="Government school children smiling in classroom and uniform" style="width: 100%; height: 260px; object-fit: cover;">
+            <div style="padding: 14px 16px; background: #f8fafc;">
+              <div style="font-weight: 700; color: var(--secondary); font-size: 0.92rem;">Classroom Joy & School Engagement</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Coordinators mentoring students in classrooms and supporting school attendance.</div>
+            </div>
+          </div>
+
+          <div style="border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0; cursor: pointer;" onclick="openPosterModal('assets/images/community-connect-internship-activity.jpg', 'Community Engagement & Snack Distribution', 'Volunteers sharing joyful moments and nutrition with young students.', 'Nutrition Aid')">
+            <img src="assets/images/community-connect-internship-activity.jpg" alt="Volunteers distributing refreshments and interacting with children" style="width: 100%; height: 260px; object-fit: cover;">
+            <div style="padding: 14px 16px; background: #f8fafc;">
+              <div style="font-weight: 700; color: var(--secondary); font-size: 0.92rem;">Community Engagement & Snack Distribution</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Volunteers sharing joyful moments and nutrition with young students.</div>
+            </div>
+          </div>
+
+          <div style="border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0; cursor: pointer;" onclick="openPosterModal('assets/images/classroom-volunteers-students.jpg', 'Interactive Classroom Mentorship', 'Interns conducting life skills and learning sessions in government schools.', 'Classroom Seva')">
+            <img src="assets/images/classroom-volunteers-students.jpg" alt="Classroom mentoring by student interns" style="width: 100%; height: 260px; object-fit: cover;">
+            <div style="padding: 14px 16px; background: #f8fafc;">
+              <div style="font-weight: 700; color: var(--secondary); font-size: 0.92rem;">Interactive Classroom Mentorship</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Interns conducting life skills and learning sessions in government schools.</div>
+            </div>
+          </div>
+
+          <div style="border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0; cursor: pointer;" onclick="openPosterModal('assets/images/classroom-notebooks-students.jpg', 'Stationery & Notebooks Handover', 'Distributing notebooks and educational materials to students.', 'Education Kit')">
+            <img src="assets/images/classroom-notebooks-students.jpg" alt="Notebooks distribution in government school" style="width: 100%; height: 260px; object-fit: cover;">
+            <div style="padding: 14px 16px; background: #f8fafc;">
+              <div style="font-weight: 700; color: var(--secondary); font-size: 0.92rem;">Stationery & Notebooks Handover</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Distributing notebooks and educational materials to students.</div>
+            </div>
+          </div>
+
+          <div style="border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid #e2e8f0; cursor: pointer;" onclick="openPosterModal('assets/images/happy-students-thumbs-up.jpg', 'Empowered Students', 'Spreading smiles and bright futures across Telangana schools.', 'Student Joy')">
+            <img src="assets/images/happy-students-thumbs-up.jpg" alt="Happy school students thumbs up" style="width: 100%; height: 260px; object-fit: cover;">
+            <div style="padding: 14px 16px; background: #f8fafc;">
+              <div style="font-weight: 700; color: var(--secondary); font-size: 0.92rem;">Empowered Students</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">Spreading smiles and bright futures across Telangana schools.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-brand-logo-wrap">
+              <img src="assets/images/logo.png" alt="White Volunteer's Foundation" class="footer-brand-logo-img">
+            </a>
+            <p>Empowering children, youth, and communities in India through education, nutrition aid, school renovation, and social service.</p>
+
+            <!-- Technology & Digital Partner -->
+            <div class="footer-tech-partner-card">
+              <div class="footer-tech-partner-label">Technology &amp; Digital Partner</div>
+              <a href="https://raambow.com" target="_blank" rel="noopener" class="dev-brand-badge-lg" title="RaamBow TechSolutions - Digital Partner">
+                <img src="assets/images/raambow-techsolutions-logo.png" alt="RaamBow TechSolutions" class="dev-brand-logo-lg">
+              </a>
+              <div style="font-size: 0.74rem; color: #94a3b8; font-weight: 500;">Digital Transformation &amp; Web Partner</div>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+              <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+              <li><a href="programs.html"><i class="fas fa-angle-right"></i> Flagship Programs</a></li>
+              <li><a href="volunteer.html"><i class="fas fa-angle-right"></i> Join as Volunteer</a></li>
+              <li><a href="donate.html"><i class="fas fa-angle-right"></i> Donate Online (80G)</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Volunteer Tracks</h4>
+            <ul class="footer-links">
+              <li><a href="javascript:void(0)" onclick="openVolunteerModal('Weekend Teaching')"><i class="fas fa-angle-right"></i> Weekend Teaching</a></li>
+              <li><a href="javascript:void(0)" onclick="openVolunteerModal('School Beautification')"><i class="fas fa-angle-right"></i> School Beautification</a></li>
+              <li><a href="javascript:void(0)" onclick="openVolunteerModal('Digital Literacy Mentor')"><i class="fas fa-angle-right"></i> Digital Mentorship</a></li>
+              <li><a href="javascript:void(0)" onclick="openVolunteerModal('Nutrition Distribution')"><i class="fas fa-angle-right"></i> Nutrition Distribution</a></li>
+              <li><a href="javascript:void(0)" onclick="openVolunteerModal('Chapter Lead')"><i class="fas fa-angle-right"></i> Chapter Leadership</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>National Headquarters</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>#10-551, Nagaram, Keesara, Greater Hyderabad, Medchal Dist., Telangana - 500083</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span><a href="tel:+919100894893" style="color: inherit;">+91 91008 94893</a> / <a href="tel:+918400996611" style="color: inherit;">84009 96611</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span><a href="mailto:founderwvfindia@wvfindia.org" style="color: inherit;">founderwvfindia@wvfindia.org</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div>&copy; 2025–2026 White Volunteers Foundation NGO. All Rights Reserved.</div>
+        <div><a href="contact.html">Privacy Policy</a> | <a href="contact.html">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals (Global Interactive System) -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="projectModalTitle">Project Details</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="projectModalBody"></div>
+      <div class="modal-footer" id="projectModalFooter"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="detailsModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="detailsModalTitle">Details</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="detailsModalBody"></div>
+      <div class="modal-footer" id="detailsModalFooter">
+        <button class="btn btn-outline" onclick="closeAllModals()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="videoModalTitle"><i class="fab fa-youtube" style="color: #ff0000;"></i> Video Documentary</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="video-modal-wrap" id="videoPlayerWrap"></div>
+        <p id="videoModalDesc" style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0;"></p>
+      </div>
+      <div class="modal-footer">
+        <a id="videoModalDirectLink" href="https://www.youtube.com/@WhiteVolunteersFoundation" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-youtube"></i> Watch on YouTube</a>
+        <button class="btn btn-primary btn-sm" onclick="closeAllModals()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pure Full-View Poster Lightbox Modal (No Text, Pure Image) -->
+  <div class="modal-overlay poster-lightbox-overlay" id="posterModal" onclick="if(event.target === this) closeAllModals()">
+    <button class="poster-lightbox-close" onclick="closeAllModals()" aria-label="Close Lightbox">&times;</button>
+    <div class="poster-lightbox-container">
+      <img src="" alt="Campaign Poster" id="posterModalImg" class="poster-lightbox-img">
+      <div class="poster-lightbox-actions" id="posterModalActions"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="volunteerModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Volunteer Registration Form</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="handleVolunteerSubmit(event)">
+          <div class="form-group">
+            <label for="volName">Full Name *</label>
+            <input type="text" id="volName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="volPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="volPhone" class="form-control" placeholder="+91 91008 94893" required>
+            </div>
+            <div class="form-group">
+              <label for="volEmail">Email *</label>
+              <input type="email" id="volEmail" class="form-control" placeholder="rahul@example.com" required>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="volCity">Your City *</label>
+              <input type="text" id="volCity" class="form-control" placeholder="Hyderabad" required>
+            </div>
+            <div class="form-group">
+              <label for="volDomain">Area of Interest *</label>
+              <select id="volDomain" class="form-control">
+                <option value="Community Connect Internship">Community Connect Internship</option>
+                <option value="Weekend School Seva">Weekend School Seva</option>
+                <option value="1. School Renovation & Infrastructure">1. School Renovation & Infrastructure</option>
+                <option value="2. Stationery & Learning Materials">2. Stationery & Learning Materials</option>
+                <option value="3. Skill Development for Students">3. Student Skill Development</option>
+                <option value="4. Digital Library in Govt Schools">4. Digital Library in Schools</option>
+                <option value="5. Women Empowerment">5. Women Empowerment</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; margin-top: 10px;">
+            <i class="fas fa-check-circle"></i> Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="donateModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Support White Volunteers Foundation</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 1.2rem;">
+          <span class="badge" style="background: #f0fdf4; color: #15803d; font-weight: 700; font-size: 0.82rem; margin-bottom: 6px;">80G TAX EXEMPTION BENEFIT</span>
+          <h4 style="color: var(--secondary); font-size: 1.2rem; margin-bottom: 4px;">Make an Instant Contribution</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Supporting: <strong id="donateModalCause" style="color: var(--primary);">Education & Nutrition Programs</strong></p>
+        </div>
+
+        <div class="payment-card" style="padding: 20px; box-shadow: none; border: 1px solid #e2e8f0; border-radius: 14px; margin-bottom: 15px;">
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--secondary); margin-bottom: 8px;">
+            <i class="fas fa-qrcode" style="color: #5f259f;"></i> Scan Official PhonePe QR Code:
+          </div>
+          <div style="text-align: center; margin-bottom: 12px;">
+            <img src="assets/images/phonepe-donation-qr.jpg" alt="White Volunteers Foundation PhonePe QR" style="max-width: 200px; height: auto; border-radius: 10px; border: 1px solid #e2e8f0; margin: 0 auto; display: block;" onerror="this.src='assets/images/logo.png'">
+          </div>
+          <div style="background: #f8fafc; padding: 10px 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>UPI ID: <strong>urbandonors@ybl</strong></span>
+            <button class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.78rem;" onclick="copyToClipboard('urbandonors@ybl', 'UPI ID')"><i class="fas fa-copy"></i> Copy</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeAllModals()">Close</button>
+        <a href="donate.html" class="btn btn-primary"><i class="fas fa-receipt"></i> Full 80G Page</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

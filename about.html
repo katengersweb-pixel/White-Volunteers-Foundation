@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | White Volunteers Foundation</title>
+  <meta name="description" content="Learn about White Volunteers Foundation's history, vision, leadership, philosophy of seva, and commitment to transparent social impact since 2015.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  
+  <!-- Google Fonts (Poppins: 400, 500, 600, 700, 800) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
+  <style>
+    @media (max-width: 1260px) {
+      .nav-menu, .nav-menu * {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+      .header-actions .btn-outline {
+        display: none !important;
+      }
+      .mobile-toggle {
+        display: flex !important;
+      }
+    }
+  </style>
+
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  </script>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-container">
+      <div class="topbar-group">
+        <span class="topbar-item"><i class="fas fa-map-marker-alt"></i> HQ: Greater Hyderabad, Telangana - 500083</span>
+        <span class="topbar-sep">&bull;</span>
+        <span class="topbar-item"><i class="fas fa-envelope"></i> <a href="mailto:founderwvfindia@wvfindia.org">founderwvfindia@wvfindia.org</a></span>
+      </div>
+
+      <div class="topbar-group">
+        <span class="topbar-item"><i class="fas fa-phone-alt"></i> <a href="tel:+919100894893">+91 91008 94893</a> / <a href="tel:+918400996611">84009 96611</a> / <a href="tel:+919186211983">91862 11983</a></span>
+        <span class="topbar-sep">&bull;</span>
+        <div class="topbar-socials">
+          <a href="https://www.facebook.com/www.wvfindia.org?mibextid=rS40aB7S9Ucbxw6v" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/p/DHYTIrJPWHr/?igsh=NXNieDFqODU4czhj" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://in.linkedin.com/in/latha-maraveni-44308a165" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="index.html" class="logo-container" aria-label="White Volunteers Foundation Home">
+          <img src="assets/images/logo.png" alt="White Volunteer's Foundation" class="brand-logo-img">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <!-- Get Involved Dropdown -->
+          <li class="nav-item has-mega-menu">
+            <a href="volunteer.html" class="nav-link">Get Involved <i class="fas fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-menu-grid">
+                  <div>
+                    <h4 class="mega-col-title">Volunteering Tracks</h4>
+                    <ul class="mega-list">
+                      <li><a href="volunteer.html#community-internship">Community Connect Internship</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('Weekend Seva')">Weekend School Seva</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('Skill Mentorship')">Student Skill Mentorship</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('School Kit Drive')">School Kit Donation Drive</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Partnerships</h4>
+                    <ul class="mega-list">
+                      <li><a href="programs.html">Corporate CSR Collaborations</a></li>
+                      <li><a href="about.html#values">Institutional Partnerships</a></li>
+                      <li><a href="about.html#impact-approach">Our Grassroots Approach</a></li>
+                      <li><a href="contact.html">Partner With Us</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Giving & Impact</h4>
+                    <ul class="mega-list">
+                      <li><a href="donate.html">Online Donation (80G Exemption)</a></li>
+                      <li><a href="donate.html#payment-portal">Scan PhonePe QR</a></li>
+                      <li><a href="newsletter.html">Foundation Newsletter Vol-1</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-cta-card">
+                    <h4>Make a Difference</h4>
+                    <p>Join over 12,500 active volunteers today!</p>
+                    <button class="btn btn-primary btn-sm" onclick="openVolunteerModal('Header Menu Signup')"><i class="fas fa-user-plus"></i> Join as Volunteer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Programs Dropdown -->
+          <li class="nav-item has-mega-menu">
+            <a href="programs.html" class="nav-link">Programs <i class="fas fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-menu-grid">
+                  <div>
+                    <h4 class="mega-col-title">5 Key Projects</h4>
+                    <ul class="mega-list">
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(1)">1. School Renovation</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(2)">2. Stationery Distribution</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(3)">3. Student Skill Development</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(4)">4. Digital Library in Schools</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(5)">5. Women Empowerment</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Flagship Drives</h4>
+                    <ul class="mega-list">
+                      <li><a href="newsletter.html#nityapalamrutam">Nityapalamrutam Milk Aid</a></li>
+                      <li><a href="newsletter.html#vastradaan">Vastradaan Clothing Drive</a></li>
+                      <li><a href="newsletter.html#bhuddhishakti">Bhuddhishakti Scholarships</a></li>
+                      <li><a href="newsletter.html#brainybirds">#BRAINYBIRDS School Seva</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Special Campaigns</h4>
+                    <ul class="mega-list">
+                      <li><a href="volunteer.html#internship">Community Connect Internship</a></li>
+                      <li><a href="javascript:void(0)" onclick="openDonateModal(200, 'Education Today - 500 Children')">Education Today Campaign</a></li>
+                      <li><a href="programs.html">View All Flagship Programs</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-cta-card">
+                    <h4 style="color: var(--primary);">Support A Child</h4>
+                    <p>Sponsor a child's complete school stationery kit for only ₹200.</p>
+                    <button class="btn btn-primary btn-sm" onclick="openDonateModal(200, 'Sponsor a Child')"><i class="fas fa-heart"></i> Donate ₹200</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Media & Videos Link -->
+          <li class="nav-item">
+            <a href="media.html" class="nav-link">Media & Videos</a>
+          </li>
+
+          <!-- News & Stories Dropdown -->
+          <li class="nav-item">
+            <a href="newsletter.html" class="nav-link">News & Stories <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="newsletter.html" class="dropdown-item">Foundation Newsletter (Vol-1)</a></li>
+              <li><a href="media.html" class="dropdown-item">Video Documentaries & Ground Action</a></li>
+              <li><a href="https://timesofindia.indiatimes.com/city/hyderabad/officers-initiative-provides-nutrition-to-3k-students/amp_articleshow/116662040.cms" target="_blank" class="dropdown-item">Times of India National Feature</a></li>
+              <li><a href="https://www.sakshi.com/telugu-news/family/start-school-breakfast-latha-maraveni-latha-maraveni-1443149" target="_blank" class="dropdown-item">Sakshi News Story</a></li>
+            </ul>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link active">About Us <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html#story" class="dropdown-item">Our Story & Journey</a></li>
+              <li><a href="about.html#leadership-note" class="dropdown-item">Message from the CEO</a></li>
+              <li><a href="about.html#impact-approach" class="dropdown-item">Our Grassroots Approach</a></li>
+              <li><a href="about.html#values" class="dropdown-item">Our 6 Core Values</a></li>
+            </ul>
+          </li>
+
+          <!-- Contact Us Link -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- Right Side Action Buttons -->
+        <div class="header-actions">
+          <button class="btn btn-outline btn-sm" onclick="openVolunteerModal('Header Volunteer')">Join us</button>
+          <button class="btn btn-primary btn-sm" onclick="openDonateModal(1000, 'Header Donate')"><i class="fas fa-heart"></i> Donate</button>
+          <button class="mobile-toggle" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. Mobile Off-Canvas Drawer (Rich, Interactive Navigation)
+       ========================================================================= -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo-container" aria-label="White Volunteers Foundation">
+        <img src="assets/images/logo.png" alt="White Volunteers Foundation" style="height: 48px; border-radius: 6px;">
+      </a>
+      <button class="drawer-close" aria-label="Close Navigation"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li>
+        <a href="index.html" class="mobile-nav-link">
+          <span><i class="fas fa-home mobile-nav-icon"></i> Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="volunteer.html" class="mobile-nav-link">
+          <span><i class="fas fa-hands-helping mobile-nav-icon"></i> Get Involved</span>
+        </a>
+      </li>
+      <li class="mobile-has-sub">
+        <div class="mobile-link-row">
+          <a href="programs.html" class="mobile-nav-link">
+            <span><i class="fas fa-graduation-cap mobile-nav-icon"></i> Programs</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle Programs Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="programs.html#breakfast"><i class="fas fa-utensils"></i> Free Breakfast Seva</a></li>
+          <li><a href="programs.html#studyhours"><i class="fas fa-book-reader"></i> Evening Study Hours</a></li>
+          <li><a href="newsletter.html#vastradaan"><i class="fas fa-tshirt"></i> Vastradaan Clothes</a></li>
+          <li><a href="newsletter.html#bhuddhishakti"><i class="fas fa-award"></i> Bhuddhishakti Awards</a></li>
+          <li><a href="newsletter.html#brainybirds"><i class="fas fa-dove"></i> #BRAINYBIRDS Seva</a></li>
+          <li><a href="programs.html"><i class="fas fa-arrow-right"></i> View All 5 Programs</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="media.html" class="mobile-nav-link">
+          <span><i class="fas fa-photo-video mobile-nav-icon"></i> Media & Videos</span>
+        </a>
+      </li>
+      <li class="mobile-has-sub">
+        <div class="mobile-link-row">
+          <a href="newsletter.html" class="mobile-nav-link">
+            <span><i class="fas fa-newspaper mobile-nav-icon"></i> News & Stories</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle Stories Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="newsletter.html"><i class="fas fa-file-alt"></i> Foundation Newsletter (Vol-1)</a></li>
+          <li><a href="media.html"><i class="fas fa-video"></i> Video Documentaries</a></li>
+          <li><a href="https://timesofindia.indiatimes.com/city/hyderabad/officers-initiative-provides-nutrition-to-3k-students/amp_articleshow/116662040.cms" target="_blank"><i class="fas fa-external-link-alt"></i> Times of India National Feature</a></li>
+          <li><a href="https://www.sakshi.com/telugu-news/family/start-school-breakfast-latha-maraveni-latha-maraveni-1443149" target="_blank"><i class="fas fa-external-link-alt"></i> Sakshi News Story</a></li>
+        </ul>
+      </li>
+      <li class="mobile-has-sub open">
+        <div class="mobile-link-row">
+          <a href="about.html" class="mobile-nav-link active">
+            <span><i class="fas fa-users mobile-nav-icon"></i> About Us</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle About Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="about.html#story"><i class="fas fa-heart"></i> Our Story & Journey</a></li>
+          <li><a href="about.html#leadership-note"><i class="fas fa-user-tie"></i> Message from the CEO</a></li>
+          <li><a href="about.html#impact-approach"><i class="fas fa-seedling"></i> Grassroots Approach</a></li>
+          <li><a href="about.html#values"><i class="fas fa-check-circle"></i> Our 6 Core Values</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="contact.html" class="mobile-nav-link">
+          <span><i class="fas fa-phone-alt mobile-nav-icon"></i> Contact Us</span>
+        </a>
+      </li>
+    </ul>
+    <div class="drawer-footer">
+      <button class="btn btn-primary" style="width: 100%; border-radius: 50px; font-weight: 700; padding: 12px;" onclick="openDonateModal(1000, 'Mobile Drawer')"><i class="fas fa-heart"></i> Donate Now</button>
+      <button class="btn btn-outline" style="width: 100%; border-radius: 50px; font-weight: 600; padding: 10px;" onclick="openVolunteerModal('Mobile Drawer')"><i class="fas fa-user-plus"></i> Join as Volunteer</button>
+      <div class="drawer-quick-contact">
+        <a href="tel:+919100894893" class="quick-contact-btn"><i class="fas fa-phone-alt"></i> Call Us</a>
+        <a href="https://wa.me/919100894893" target="_blank" class="quick-contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Banner -->
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, #0c4fa8 100%); color: #fff; padding: 4.5rem 0; text-align: center;">
+    <div class="container">
+      <h1 style="color: #ffffff; margin-bottom: 1rem; font-size: 2.6rem; font-weight: 800;">About Us</h1>
+      <p style="color: rgba(255, 255, 255, 0.95); max-width: 780px; margin: 0 auto; font-size: 1.2rem; font-weight: 600;">
+        Empowering Children. Strengthening Schools. Transforming Communities.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Us & Our Core Approach -->
+  <section class="section-padding" id="story">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: center;">
+        <div>
+          <h2 class="section-title align-left">Creating Sustainable Impact for Children, Youth & Women</h2>
+          <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-main); margin-bottom: 1.2rem;">
+            <strong>White Volunteers Foundation</strong> is a social-impact organization committed to creating better opportunities for children, students, women, and underserved communities.
+          </p>
+          <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1.2rem;">
+            We work primarily with <strong>Government Schools</strong> and communities to improve educational infrastructure, provide essential learning resources, promote digital education, develop practical skills, and empower women to build stronger and more independent futures.
+          </p>
+          <div style="background: var(--primary-light); padding: 1.2rem 1.5rem; border-radius: 12px; border-left: 5px solid var(--primary); margin: 1.5rem 0;">
+            <p style="margin: 0; font-weight: 700; color: var(--secondary); font-size: 1.05rem;">
+              Our approach is simple: <em>identify real needs, take practical action, and create sustainable impact.</em>
+            </p>
+          </div>
+          
+          <div style="background: var(--bg-subtle); padding: 20px; border-radius: 12px; margin-top: 20px; border: 1px solid var(--border-color);">
+            <h4 style="color: var(--secondary); font-size: 1.1rem; margin-bottom: 8px;">The Genesis & Nityapalamrutam:</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-main); margin-bottom: 8px;">
+              In 2012, <strong>Shekhar Maraveni</strong>, a dedicated changemaker and officer of the Indian Armed Forces, witnessed the extreme hardship of tribal children in <em>Usoor</em> (Bijapur Dist., Chhattisgarh). Malnutrition and lack of clothing caused alarming school dropouts. Determined that no child in India should leave school due to hunger or basic deprivation, he spearheaded grassroots educational seva that led to the founding of <strong>White Volunteers Foundation</strong>.
+            </p>
+            <p style="font-size: 0.88rem; line-height: 1.5; color: var(--text-muted); margin: 0;">
+              This gave birth to <strong>Nityapalamrutam</strong>, delivering 150 ml of pure milk daily to every school-going child to eliminate chronic malnutrition, now recognized across national media.
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+            <div style="background: var(--bg-warm); padding: 1rem 1.4rem; border-radius: 12px; border-left: 4px solid var(--primary);">
+              <h4 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 0.2rem;">2015</h4>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Year Established</span>
+            </div>
+            <div style="background: var(--bg-warm); padding: 1rem 1.4rem; border-radius: 12px; border-left: 4px solid var(--accent);">
+              <h4 style="color: var(--accent); font-size: 1.4rem; margin-bottom: 0.2rem;">12,500+</h4>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Children Educated</span>
+            </div>
+            <div style="background: var(--bg-warm); padding: 1rem 1.4rem; border-radius: 12px; border-left: 4px solid var(--secondary);">
+              <h4 style="color: var(--secondary); font-size: 1.4rem; margin-bottom: 0.2rem;">45,000+</h4>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Meals Served</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="assets/images/school-girls-thumbs-up-outdoors.jpg" alt="White Volunteers Foundation School Engagement - Joyful Students" style="border-radius: 20px; box-shadow: var(--shadow-lg); width: 100%; height: 480px; object-fit: cover; object-position: center 15%;">
+          
+          <div style="background: #ffffff; padding: 20px; border-radius: 14px; box-shadow: var(--shadow-md); margin-top: 20px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <span class="badge" style="background: var(--primary-light); color: var(--primary); margin-bottom: 5px; font-size: 0.8rem;">Official Publication</span>
+              <h4 style="margin: 0; font-size: 1rem; color: var(--secondary);">Foundation Newsletter (Vol-1)</h4>
+              <p style="margin: 0; font-size: 0.82rem; color: var(--text-muted);">Read stories on Nityapalamrutam, Vastradaan & Fearless 40</p>
+            </div>
+            <a href="newsletter.html" class="btn btn-primary btn-sm"><i class="fas fa-book-open"></i> Read Issue</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Timeline / Milestone Section -->
+  <section class="section-padding timeline-section" id="story">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title" style="color: #fff;">A Decade of Selfless Service</h2>
+        <p class="section-desc" style="color: rgba(255, 255, 255, 0.85);">From humble beginnings to a nationwide volunteering family, our journey is fueled by dedication and community trust.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <span class="dot">2015</span>
+          <h3>Genesis</h3>
+          <p>Founded in Greater Hyderabad by passionate changemakers distributing food and school aid.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="dot">2018</span>
+          <h3>Nityapalamrutam</h3>
+          <p>Launched 150ml daily milk aid &amp; Abhyasikas evening study centers across Telangana.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="dot">2021</span>
+          <h3>Arogya Nidhi</h3>
+          <p>Critical COVID-19 relief, Arogya Nidhi medical fund, and 45,000+ meals distributed.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="dot">Now</span>
+          <h3>Pan-India</h3>
+          <p>Active nationwide presence, 12,500+ children supported, and recognized as Best NGO in Telangana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CEO Leadership Note -->
+  <section class="section-padding" id="leadership-note">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Message from the CEO</h2>
+      </div>
+
+      <div class="ceo-card">
+        <div class="ceo-avatar-wrap">
+          <div style="width: 190px; height: 190px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 5px solid #ffffff; box-shadow: 0 10px 25px rgba(0,0,0,0.18);">
+            <img src="assets/images/founder-ceo-latha-maraveni.jpg" alt="Latha Maraveni - CEO & Founder, White Volunteers Foundation" style="width: 100%; height: 100%; object-fit: cover; object-position: 40% 18%;">
+          </div>
+          <span class="ceo-badge-tag"><i class="fas fa-certificate"></i> Founder & CEO</span>
+          <h3 class="ceo-name">Latha Maraveni</h3>
+          <div class="ceo-role">CEO & Founder, White Volunteers Foundation</div>
+          <div style="margin-top: 10px;">
+            <span class="badge" style="background: #fef3c7; color: #b45309; font-size: 0.76rem; font-weight: 700;">Social Activist & Changemaker</span>
+          </div>
+        </div>
+
+        <div class="ceo-content">
+          <h3>Leading Initiatives with Purpose & Measurable Social Impact</h3>
+          <p style="font-size: 0.98rem; line-height: 1.65; color: var(--text-main); margin-bottom: 15px;">
+            As CEO of White Volunteers Foundation, I lead initiatives focused on social service, education, youth empowerment, volunteering, and community development.
+          </p>
+          
+          <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--secondary); margin-bottom: 10px;">Key areas of leadership include:</h4>
+          <ul class="ceo-points-list">
+            <li><i class="fas fa-check-circle"></i> Developing and coordinating community-focused initiatives</li>
+            <li><i class="fas fa-check-circle"></i> Building relationships with volunteers, students, institutions, and organizations</li>
+            <li><i class="fas fa-check-circle"></i> Creating opportunities for students and young people to participate in meaningful social-impact activities</li>
+            <li><i class="fas fa-check-circle"></i> Developing partnerships and collaborations with organizations and educational institutions</li>
+            <li><i class="fas fa-check-circle"></i> Supporting education-focused initiatives for children and communities</li>
+            <li><i class="fas fa-check-circle"></i> Promoting volunteering and responsible citizenship</li>
+            <li><i class="fas fa-check-circle"></i> Leading the organization’s vision, partnerships, and growth</li>
+          </ul>
+
+          <div style="background: var(--bg-subtle); padding: 15px 20px; border-radius: 10px; border-left: 4px solid var(--primary); margin-top: 15px;">
+            <p style="font-weight: 600; color: var(--secondary); margin: 0 0 10px 0; font-size: 0.96rem; font-style: italic;">
+              "My focus is on building sustainable collaborations that connect people and organizations with opportunities to create measurable social impact."
+            </p>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a href="https://in.linkedin.com/in/latha-maraveni-44308a165" target="_blank" class="btn btn-primary btn-sm" style="background: #0077b5; border-color: #0077b5;"><i class="fab fa-linkedin-in"></i> Connect on LinkedIn</a>
+              <a href="contact.html" class="btn btn-outline btn-sm"><i class="fas fa-envelope"></i> Contact Office</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Grassroots Approach -->
+  <section class="section-padding" style="background-color: var(--bg-warm);" id="impact-approach">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Our Grassroots Approach</h2>
+        <p class="section-desc">At White Volunteers Foundation, we believe that meaningful change requires direct community connection, ongoing commitment, and transparent on-ground work.</p>
+      </div>
+
+      <div class="impact-lifecycle">
+        <div class="lifecycle-step">
+          <div class="lifecycle-step-num">1</div>
+          <div class="lifecycle-step-title">Identify</div>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Assess genuine school & community needs</p>
+        </div>
+
+        <div class="lifecycle-step">
+          <div class="lifecycle-step-num">2</div>
+          <div class="lifecycle-step-title">Plan</div>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Organize volunteers and resources</p>
+        </div>
+
+        <div class="lifecycle-step">
+          <div class="lifecycle-step-num">3</div>
+          <div class="lifecycle-step-title">Implement</div>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Deliver supplies, nutrition & training</p>
+        </div>
+
+        <div class="lifecycle-step">
+          <div class="lifecycle-step-num">4</div>
+          <div class="lifecycle-step-title">Support</div>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Regular follow-ups with teachers & students</p>
+        </div>
+
+        <div class="lifecycle-step">
+          <div class="lifecycle-step-num">5</div>
+          <div class="lifecycle-step-title">Empower</div>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Build student confidence and practical skills</p>
+        </div>
+
+        <div class="lifecycle-step">
+          <div class="lifecycle-step-num">6</div>
+          <div class="lifecycle-step-title">Sustain</div>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Ensure lasting community development</p>
+        </div>
+      </div>
+
+      <div style="background: #ffffff; padding: 25px 30px; border-radius: 12px; text-align: center; border: 1px solid var(--border-color); max-width: 850px; margin: 0 auto;">
+        <p style="margin: 0; color: var(--text-main); font-size: 1rem; line-height: 1.6;">
+          <i class="fas fa-hands-helping" style="color: var(--primary); margin-right: 8px;"></i>
+          We work closely with <strong>schools, communities, volunteers, donors, and local stakeholders</strong> to ensure that our programs respond to genuine needs and create lasting impact.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our 6 Core Values -->
+  <section class="section-padding" id="values">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Our Core Values</h2>
+        <p class="section-desc">These core principles guide every initiative, partnership, and volunteer engagement at White Volunteers Foundation.</p>
+      </div>
+
+      <div class="values-grid-6">
+        <div class="value-card-box">
+          <div class="value-icon-circle"><i class="fas fa-hand-holding-heart"></i></div>
+          <h3 class="value-title">Compassion</h3>
+          <p class="value-desc">We put people and their needs at the heart of our work.</p>
+        </div>
+
+        <div class="value-card-box">
+          <div class="value-icon-circle"><i class="fas fa-graduation-cap"></i></div>
+          <h3 class="value-title">Education</h3>
+          <p class="value-desc">We believe education is one of the strongest tools for social transformation.</p>
+        </div>
+
+        <div class="value-card-box">
+          <div class="value-icon-circle"><i class="fas fa-seedling"></i></div>
+          <h3 class="value-title">Sustainability</h3>
+          <p class="value-desc">We aim to create solutions that continue to benefit communities over the long term.</p>
+        </div>
+
+        <div class="value-card-box">
+          <div class="value-icon-circle"><i class="fas fa-search"></i></div>
+          <h3 class="value-title">Transparency</h3>
+          <p class="value-desc">We value responsible use of resources and clear communication with our supporters.</p>
+        </div>
+
+        <div class="value-card-box">
+          <div class="value-icon-circle"><i class="fas fa-users"></i></div>
+          <h3 class="value-title">Inclusion</h3>
+          <p class="value-desc">We work toward equal opportunities for children, women, and underserved communities.</p>
+        </div>
+
+        <div class="value-card-box">
+          <div class="value-icon-circle"><i class="fas fa-heart"></i></div>
+          <h3 class="value-title">Service</h3>
+          <p class="value-desc">We believe meaningful change begins when people come together to serve others.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Volunteers & Partnerships -->
+  <section class="section-padding" style="background-color: var(--bg-warm);" id="volunteers-partnerships">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px;">
+        <div style="background: #ffffff; padding: 40px 35px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border-top: 5px solid var(--primary);">
+          <div style="width: 55px; height: 55px; border-radius: 12px; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 20px;">
+            <i class="fas fa-people-carry"></i>
+          </div>
+          <h3 style="font-size: 1.4rem; color: var(--secondary); margin-bottom: 12px;">Our Volunteers</h3>
+          <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-main); margin-bottom: 15px;">
+            <strong>Our volunteers are the strength behind our work.</strong> They contribute their time, skills, ideas, energy, and compassion to support children, schools, women, and communities.
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 20px;">
+            From organizing educational programs to supporting school improvement projects, volunteers help turn ideas into action.
+          </p>
+          <button class="btn btn-outline btn-sm" onclick="openVolunteerModal('About Page Volunteers')"><i class="fas fa-user-plus"></i> Join as a Volunteer</button>
+        </div>
+
+        <div style="background: #ffffff; padding: 40px 35px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border-top: 5px solid var(--accent);">
+          <div style="width: 55px; height: 55px; border-radius: 12px; background: var(--accent-light); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 20px;">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 style="font-size: 1.4rem; color: var(--secondary); margin-bottom: 12px;">Partnerships for Impact</h3>
+          <p style="font-size: 0.95rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 12px;">
+            We welcome collaboration with:
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0 0 15px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.9rem; color: var(--text-main);">
+            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Government Schools</li>
+            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Educational institutions</li>
+            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Corporate CSR teams</li>
+            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Foundations & NGOs</li>
+            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Individual donors</li>
+            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Community groups</li>
+            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Volunteers</li>
+            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Subject-matter experts</li>
+          </ul>
+          <p style="font-size: 0.92rem; font-weight: 600; color: var(--secondary); margin: 0;">
+            Together, we can build stronger schools and create better opportunities for the next generation.
+          </p>
+        </div>
+      </div>
+
+      <!-- State Recognition Banner -->
+      <div style="margin-top: 3.5rem; background: linear-gradient(135deg, #091e3e 0%, #1e3a8a 100%); color: #ffffff; border-radius: 20px; padding: 2.5rem; box-shadow: var(--shadow-md); border: 1px solid rgba(255,255,255,0.15);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; align-items: center;">
+          <div>
+            <span class="badge" style="background: #fef3c7; color: #b45309; font-weight: 800; font-size: 0.85rem; padding: 6px 16px; margin-bottom: 12px;">
+              <i class="fas fa-crown"></i> STATE RECOGNITION
+            </span>
+            <h2 style="color: #ffffff; font-size: 2rem; margin-bottom: 12px; font-weight: 800; line-height: 1.25;">
+              Best NGO in Telangana State
+            </h2>
+            <p style="color: #e2e8f0; font-size: 1rem; line-height: 1.7; margin-bottom: 18px;">
+              Recognized for groundbreaking grassroots impact across Education, Morning Nutrition (Nityapalamrutam), School Infrastructure Revamping, Environment & Youth Empowerment.
+            </p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <button class="btn btn-primary btn-sm" style="background: #16a34a; border-color: #16a34a;" onclick="openVolunteerModal('Best NGO Telangana Volunteer')"><i class="fas fa-user-plus"></i> Join as Changemaker</button>
+              <a href="media.html" class="btn btn-white btn-sm" style="color: #091e3e;"><i class="fas fa-images"></i> View Media & Gallery</a>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div style="border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); background: #ffffff;">
+              <img src="assets/images/poster-best-ngo-telangana-be-the-change.jpg" alt="Best NGO in Telangana State Poster" style="width: 100%; height: 220px; object-fit: contain; background: #fff8f0;">
+            </div>
+            <div style="border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); background: #ffffff;">
+              <img src="assets/images/volunteers-children-community-hall.jpg" alt="Volunteers and children celebration" style="width: 100%; height: 220px; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal & Financial Transparency -->
+  <section class="section-padding" id="financials">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Compliance & Financial Transparency</h2>
+        <p class="section-desc">White Volunteers Foundation is registered as an Indian non-profit organization operating in strict compliance with statutory regulatory standards.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+        <div style="background: #fff; padding: 1.5rem; border-radius: 14px; text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <i class="fas fa-certificate" style="font-size: 2rem; color: var(--primary); margin-bottom: 0.8rem;"></i>
+          <h4>Section 80G Certified</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Donors in India can claim 50% tax exemption on their contributions under IT Act 80G.</p>
+        </div>
+
+        <div style="background: #fff; padding: 1.5rem; border-radius: 14px; text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <i class="fas fa-stamp" style="font-size: 2rem; color: var(--accent); margin-bottom: 0.8rem;"></i>
+          <h4>12A Registered</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Registered as a recognized charitable trust with full income tax non-profit status.</p>
+        </div>
+
+        <div style="background: #fff; padding: 1.5rem; border-radius: 14px; text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <i class="fas fa-landmark" style="font-size: 2rem; color: var(--secondary); margin-bottom: 0.8rem;"></i>
+          <h4>NITI Aayog Darpan</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Listed in the official Government of India NGO-Darpan portal with verified credentials.</p>
+        </div>
+
+        <div style="background: #fff; padding: 1.5rem; border-radius: 14px; text-align: center; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+          <i class="fas fa-handshake-angle" style="font-size: 2rem; color: #16a34a; margin-bottom: 0.8rem;"></i>
+          <h4>CSR-1 Registered</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Ministry of Corporate Affairs authorized implementing agency for CSR projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology & Innovation Partner Spotlight -->
+  <section style="padding: 50px 0; background: #ffffff; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%); border-radius: 18px; padding: 35px 40px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 25px; box-shadow: var(--shadow-sm);">
+        <div style="flex: 1; min-width: 280px;">
+          <h3 style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 8px;">Engineered by RaamBow TechSolutions</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">
+            Our digital platform, volunteer management network, and online portal are proudly architected, developed, and maintained by <strong>RaamBow TechSolutions</strong> — empowering social impact through modern technology.
+          </p>
+        </div>
+        <div style="background: #ffffff; padding: 18px 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; display: flex; align-items: center;">
+          <a href="https://raambow.com" target="_blank" rel="noopener" title="Visit RaamBow TechSolutions">
+            <img src="assets/images/raambow-techsolutions-logo.png" alt="RaamBow TechSolutions" style="height: 52px; width: auto; display: block;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us CTA -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-banner-content">
+        <h2 class="cta-banner-title">Volunteer. Partner. Support. Transform.</h2>
+        <p class="cta-banner-desc">
+          Be part of White Volunteers Foundation and help us create meaningful opportunities for children, strengthen Government Schools, support digital learning, develop skills, and empower women.
+        </p>
+        <p class="cta-banner-tagline">
+          Together, we can turn support into opportunity and opportunity into lasting change.
+        </p>
+        <div class="cta-banner-buttons">
+          <button class="btn btn-white btn-lg" onclick="openVolunteerModal('About Bottom CTA')">
+            <i class="fas fa-user-plus"></i> Volunteer With Us
+          </button>
+          <button class="btn btn-outline-white btn-lg" onclick="openDonateModal(1000, 'Support Our Work (80G)')">
+            <i class="fas fa-heart"></i> Support Our Work (80G)
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-brand-logo-wrap">
+              <img src="assets/images/logo.png" alt="White Volunteer's Foundation" class="footer-brand-logo-img">
+            </a>
+            <p>White Volunteers Foundation is a registered non-profit organization dedicated to fostering a culture of organized volunteering, societal empathy, and holistic community empowerment across India.</p>
+            
+            <!-- Technology & Digital Partner -->
+            <div class="footer-tech-partner-card">
+              <div class="footer-tech-partner-label">Technology &amp; Digital Partner</div>
+              <a href="https://raambow.com" target="_blank" rel="noopener" class="dev-brand-badge-lg" title="RaamBow TechSolutions - Digital Partner">
+                <img src="assets/images/raambow-techsolutions-logo.png" alt="RaamBow TechSolutions" class="dev-brand-logo-lg">
+              </a>
+              <div style="font-size: 0.74rem; color: #94a3b8; font-weight: 500;">Digital Transformation &amp; Web Partner</div>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+              <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+              <li><a href="programs.html"><i class="fas fa-angle-right"></i> Flagship Programs</a></li>
+              <li><a href="volunteer.html"><i class="fas fa-angle-right"></i> Join as Volunteer</a></li>
+              <li><a href="donate.html"><i class="fas fa-angle-right"></i> Donate Online (80G)</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Governance & Story</h4>
+            <ul class="footer-links">
+              <li><a href="#story"><i class="fas fa-angle-right"></i> Genesis (2012–2015)</a></li>
+              <li><a href="#leadership-note"><i class="fas fa-angle-right"></i> Founder & CEO Message</a></li>
+              <li><a href="#impact-approach"><i class="fas fa-angle-right"></i> Grassroots Approach</a></li>
+              <li><a href="#financials"><i class="fas fa-angle-right"></i> 80G & CSR-1 Compliance</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>National Headquarters</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>#10-551, Nagaram, Keesara, Greater Hyderabad, Telangana - 500083</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span><a href="tel:+919100894893" style="color: inherit;">+91 91008 94893</a> / <a href="tel:+918400996611" style="color: inherit;">84009 96611</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span><a href="mailto:founderwvfindia@wvfindia.org" style="color: inherit;">founderwvfindia@wvfindia.org</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div>&copy; 2025–2026 White Volunteers Foundation NGO. All Rights Reserved.</div>
+        <div><a href="contact.html">Privacy Policy</a> | <a href="contact.html">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals (Global Interactive System) -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="projectModalTitle">Project Details</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="projectModalBody"></div>
+      <div class="modal-footer" id="projectModalFooter"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="detailsModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="detailsModalTitle">Details</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="detailsModalBody"></div>
+      <div class="modal-footer" id="detailsModalFooter">
+        <button class="btn btn-outline" onclick="closeAllModals()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="videoModalTitle"><i class="fab fa-youtube" style="color: #ff0000;"></i> Video Documentary</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="video-modal-wrap" id="videoPlayerWrap"></div>
+        <p id="videoModalDesc" style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0;"></p>
+      </div>
+      <div class="modal-footer">
+        <a id="videoModalDirectLink" href="https://www.youtube.com/@WhiteVolunteersFoundation" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-youtube"></i> Watch on YouTube</a>
+        <button class="btn btn-primary btn-sm" onclick="closeAllModals()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pure Full-View Poster Lightbox Modal (No Text, Pure Image) -->
+  <div class="modal-overlay poster-lightbox-overlay" id="posterModal" onclick="if(event.target === this) closeAllModals()">
+    <button class="poster-lightbox-close" onclick="closeAllModals()" aria-label="Close Lightbox">&times;</button>
+    <div class="poster-lightbox-container">
+      <img src="" alt="Campaign Poster" id="posterModalImg" class="poster-lightbox-img">
+      <div class="poster-lightbox-actions" id="posterModalActions"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="volunteerModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Volunteer Registration Form</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="handleVolunteerSubmit(event)">
+          <div class="form-group">
+            <label for="volName">Full Name *</label>
+            <input type="text" id="volName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="volPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="volPhone" class="form-control" placeholder="+91 91008 94893" required>
+            </div>
+            <div class="form-group">
+              <label for="volEmail">Email *</label>
+              <input type="email" id="volEmail" class="form-control" placeholder="rahul@example.com" required>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="volCity">Your City *</label>
+              <input type="text" id="volCity" class="form-control" placeholder="Hyderabad" required>
+            </div>
+            <div class="form-group">
+              <label for="volDomain">Area of Interest *</label>
+              <select id="volDomain" class="form-control">
+                <option value="1. School Renovation & Infrastructure">1. School Renovation & Infrastructure</option>
+                <option value="2. Stationery & Learning Materials">2. Stationery & Learning Materials</option>
+                <option value="3. Skill Development for Students">3. Student Skill Development</option>
+                <option value="4. Digital Library in Govt Schools">4. Digital Library in Schools</option>
+                <option value="5. Women Empowerment">5. Women Empowerment</option>
+                <option value="Community Connect Internship">Community Connect Internship</option>
+                <option value="Weekend School Seva">Weekend School Seva</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; margin-top: 10px;">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="donateModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Support White Volunteers Foundation</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 1.2rem;">
+          <span class="badge" style="background: #f0fdf4; color: #15803d; font-weight: 700; font-size: 0.82rem; margin-bottom: 6px;">80G TAX EXEMPTION BENEFIT</span>
+          <h4 style="color: var(--secondary); font-size: 1.2rem; margin-bottom: 4px;">Make an Instant Contribution</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Supporting: <strong id="donateModalCause" style="color: var(--primary);">Education & Nutrition Programs</strong></p>
+        </div>
+
+        <div class="payment-card" style="padding: 20px; box-shadow: none; border: 1px solid #e2e8f0; border-radius: 14px; margin-bottom: 15px;">
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--secondary); margin-bottom: 8px;">
+            <i class="fas fa-qrcode" style="color: #5f259f;"></i> Scan Official PhonePe QR Code:
+          </div>
+          <div style="text-align: center; margin-bottom: 12px;">
+            <img src="assets/images/phonepe-donation-qr.jpg" alt="White Volunteers Foundation PhonePe QR" style="max-width: 200px; height: auto; border-radius: 10px; border: 1px solid #e2e8f0; margin: 0 auto; display: block;" onerror="this.src='assets/images/logo.png'">
+          </div>
+          <div style="background: #f8fafc; padding: 10px 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>UPI ID: <strong>urbandonors@ybl</strong></span>
+            <button class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.78rem;" onclick="copyToClipboard('urbandonors@ybl', 'UPI ID')"><i class="fas fa-copy"></i> Copy</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeAllModals()">Close</button>
+        <a href="donate.html" class="btn btn-primary"><i class="fas fa-receipt"></i> Full 80G Page</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

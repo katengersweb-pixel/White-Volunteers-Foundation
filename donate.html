@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Online (80G Tax Exemption) | White Volunteers Foundation</title>
+  <meta name="description" content="Support White Volunteers Foundation's educational, nutrition, and school infrastructure programs. All donations are eligible for 50% 80G tax benefits.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  
+  <!-- Google Fonts (Poppins: 400, 500, 600, 700, 800) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
+
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  </script>
+  
+  <style>
+    @media (max-width: 1260px) {
+      .nav-menu, .nav-menu * {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+      .header-actions .btn-outline {
+        display: none !important;
+      }
+      .mobile-toggle {
+        display: flex !important;
+      }
+    }
+    .donation-options {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .donation-btn {
+      flex: 1;
+      min-width: 90px;
+      padding: 12px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1rem;
+      background: #f8fafc;
+      color: #475569;
+      transition: all 0.25s ease;
+      text-align: center;
+    }
+
+    .donation-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .donation-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 14px rgba(0, 168, 204, 0.25);
+    }
+
+    .input-group-custom {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-prefix {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 700;
+      color: #64748b;
+      font-size: 1.2rem;
+    }
+
+    .input-group-custom input {
+      width: 100%;
+      padding: 14px 16px 14px 42px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--dark);
+      outline: none;
+      transition: all 0.25s ease;
+    }
+
+    .input-group-custom input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(0, 168, 204, 0.15);
+    }
+
+    .payment-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .phone-box {
+      background: #f8fafc;
+      padding: 18px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      margin-top: 15px;
+    }
+
+    .phone-number {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 8px 0 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-container">
+      <div class="topbar-group">
+        <span class="topbar-item"><i class="fas fa-map-marker-alt"></i> HQ: Greater Hyderabad, Telangana - 500083</span>
+        <span class="topbar-sep">&bull;</span>
+        <span class="topbar-item"><i class="fas fa-envelope"></i> <a href="mailto:founderwvfindia@wvfindia.org">founderwvfindia@wvfindia.org</a></span>
+      </div>
+
+      <div class="topbar-group">
+        <span class="topbar-item"><i class="fas fa-phone-alt"></i> <a href="tel:+919100894893">+91 91008 94893</a> / <a href="tel:+918400996611">84009 96611</a> / <a href="tel:+919186211983">91862 11983</a></span>
+        <span class="topbar-sep">&bull;</span>
+        <div class="topbar-socials">
+          <a href="https://www.facebook.com/www.wvfindia.org?mibextid=rS40aB7S9Ucbxw6v" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/p/DHYTIrJPWHr/?igsh=NXNieDFqODU4czhj" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://in.linkedin.com/in/latha-maraveni-44308a165" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="index.html" class="logo-container" aria-label="White Volunteers Foundation Home">
+          <img src="assets/images/logo.png" alt="White Volunteer's Foundation" class="brand-logo-img">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+
+          <!-- Get Involved Dropdown -->
+          <li class="nav-item has-mega-menu">
+            <a href="volunteer.html" class="nav-link">Get Involved <i class="fas fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-menu-grid">
+                  <div>
+                    <h4 class="mega-col-title">Volunteering Tracks</h4>
+                    <ul class="mega-list">
+                      <li><a href="volunteer.html#community-internship">Community Connect Internship</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('Weekend Seva')">Weekend School Seva</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('Skill Mentorship')">Student Skill Mentorship</a></li>
+                      <li><a href="volunteer.html" onclick="openVolunteerModal('School Kit Drive')">School Kit Donation Drive</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Partnerships</h4>
+                    <ul class="mega-list">
+                      <li><a href="programs.html">Corporate CSR Collaborations</a></li>
+                      <li><a href="about.html#values">Institutional Partnerships</a></li>
+                      <li><a href="about.html#impact-approach">Our Grassroots Approach</a></li>
+                      <li><a href="contact.html">Partner With Us</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Giving & Impact</h4>
+                    <ul class="mega-list">
+                      <li><a href="donate.html">Online Donation (80G Exemption)</a></li>
+                      <li><a href="donate.html#payment-portal">Scan PhonePe QR</a></li>
+                      <li><a href="newsletter.html">Foundation Newsletter Vol-1</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-cta-card">
+                    <h4>Make a Difference</h4>
+                    <p>Join over 12,500 active volunteers today!</p>
+                    <button class="btn btn-primary btn-sm" onclick="openVolunteerModal('Header Menu Signup')"><i class="fas fa-user-plus"></i> Join as Volunteer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Programs Dropdown -->
+          <li class="nav-item has-mega-menu">
+            <a href="programs.html" class="nav-link">Programs <i class="fas fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-menu-grid">
+                  <div>
+                    <h4 class="mega-col-title">5 Key Projects</h4>
+                    <ul class="mega-list">
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(1)">1. School Renovation</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(2)">2. Stationery Distribution</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(3)">3. Student Skill Development</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(4)">4. Digital Library in Schools</a></li>
+                      <li><a href="javascript:void(0)" onclick="openProjectModal(5)">5. Women Empowerment</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Flagship Drives</h4>
+                    <ul class="mega-list">
+                      <li><a href="newsletter.html#nityapalamrutam">Nityapalamrutam Milk Aid</a></li>
+                      <li><a href="newsletter.html#vastradaan">Vastradaan Clothing Drive</a></li>
+                      <li><a href="newsletter.html#bhuddhishakti">Bhuddhishakti Scholarships</a></li>
+                      <li><a href="newsletter.html#brainybirds">#BRAINYBIRDS School Seva</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="mega-col-title">Special Campaigns</h4>
+                    <ul class="mega-list">
+                      <li><a href="volunteer.html#internship">Community Connect Internship</a></li>
+                      <li><a href="javascript:void(0)" onclick="openDonateModal(200, 'Education Today - 500 Children')">Education Today Campaign</a></li>
+                      <li><a href="programs.html">View All Flagship Programs</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-cta-card">
+                    <h4 style="color: var(--primary);">Support A Child</h4>
+                    <p>Sponsor a child's complete school stationery kit for only ₹200.</p>
+                    <button class="btn btn-primary btn-sm" onclick="openDonateModal(200, 'Sponsor a Child')"><i class="fas fa-heart"></i> Donate ₹200</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Media & Videos Link -->
+          <li class="nav-item">
+            <a href="media.html" class="nav-link">Media & Videos</a>
+          </li>
+
+          <!-- News & Stories Dropdown -->
+          <li class="nav-item">
+            <a href="newsletter.html" class="nav-link">News & Stories <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="newsletter.html" class="dropdown-item">Foundation Newsletter (Vol-1)</a></li>
+              <li><a href="media.html" class="dropdown-item">Video Documentaries & Ground Action</a></li>
+              <li><a href="https://timesofindia.indiatimes.com/city/hyderabad/officers-initiative-provides-nutrition-to-3k-students/amp_articleshow/116662040.cms" target="_blank" class="dropdown-item">Times of India National Feature</a></li>
+              <li><a href="https://www.sakshi.com/telugu-news/family/start-school-breakfast-latha-maraveni-latha-maraveni-1443149" target="_blank" class="dropdown-item">Sakshi News Story</a></li>
+            </ul>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html#story" class="dropdown-item">Our Story & Journey</a></li>
+              <li><a href="about.html#leadership-note" class="dropdown-item">Message from the CEO</a></li>
+              <li><a href="about.html#impact-approach" class="dropdown-item">Our Grassroots Approach</a></li>
+              <li><a href="about.html#values" class="dropdown-item">Our 6 Core Values</a></li>
+            </ul>
+          </li>
+
+          <!-- Contact Us Link -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <!-- Right Side Action Buttons -->
+        <div class="header-actions">
+          <button class="btn btn-outline btn-sm" onclick="openVolunteerModal('Donate Header')">Join us</button>
+          <a href="#payment-portal" class="btn btn-primary btn-sm"><i class="fas fa-heart"></i> Donate</a>
+          <button class="mobile-toggle" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. Mobile Off-Canvas Drawer (Rich, Interactive Navigation)
+       ========================================================================= -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo-container" aria-label="White Volunteers Foundation">
+        <img src="assets/images/logo.png" alt="White Volunteers Foundation" style="height: 48px; border-radius: 6px;">
+      </a>
+      <button class="drawer-close" aria-label="Close Navigation"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li>
+        <a href="index.html" class="mobile-nav-link">
+          <span><i class="fas fa-home mobile-nav-icon"></i> Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="volunteer.html" class="mobile-nav-link">
+          <span><i class="fas fa-hands-helping mobile-nav-icon"></i> Get Involved</span>
+        </a>
+      </li>
+      <li class="mobile-has-sub">
+        <div class="mobile-link-row">
+          <a href="programs.html" class="mobile-nav-link">
+            <span><i class="fas fa-graduation-cap mobile-nav-icon"></i> Programs</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle Programs Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="programs.html#breakfast"><i class="fas fa-utensils"></i> Free Breakfast Seva</a></li>
+          <li><a href="programs.html#studyhours"><i class="fas fa-book-reader"></i> Evening Study Hours</a></li>
+          <li><a href="newsletter.html#vastradaan"><i class="fas fa-tshirt"></i> Vastradaan Clothes</a></li>
+          <li><a href="newsletter.html#bhuddhishakti"><i class="fas fa-award"></i> Bhuddhishakti Awards</a></li>
+          <li><a href="newsletter.html#brainybirds"><i class="fas fa-dove"></i> #BRAINYBIRDS Seva</a></li>
+          <li><a href="programs.html"><i class="fas fa-arrow-right"></i> View All 5 Programs</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="media.html" class="mobile-nav-link">
+          <span><i class="fas fa-photo-video mobile-nav-icon"></i> Media & Videos</span>
+        </a>
+      </li>
+      <li class="mobile-has-sub">
+        <div class="mobile-link-row">
+          <a href="newsletter.html" class="mobile-nav-link">
+            <span><i class="fas fa-newspaper mobile-nav-icon"></i> News & Stories</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle Stories Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="newsletter.html"><i class="fas fa-file-alt"></i> Foundation Newsletter (Vol-1)</a></li>
+          <li><a href="media.html"><i class="fas fa-video"></i> Video Documentaries</a></li>
+          <li><a href="https://timesofindia.indiatimes.com/city/hyderabad/officers-initiative-provides-nutrition-to-3k-students/amp_articleshow/116662040.cms" target="_blank"><i class="fas fa-external-link-alt"></i> Times of India National Feature</a></li>
+          <li><a href="https://www.sakshi.com/telugu-news/family/start-school-breakfast-latha-maraveni-latha-maraveni-1443149" target="_blank"><i class="fas fa-external-link-alt"></i> Sakshi News Story</a></li>
+        </ul>
+      </li>
+      <li class="mobile-has-sub">
+        <div class="mobile-link-row">
+          <a href="about.html" class="mobile-nav-link">
+            <span><i class="fas fa-users mobile-nav-icon"></i> About Us</span>
+          </a>
+          <button class="mobile-sub-toggle" aria-label="Toggle About Submenu"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <ul class="mobile-sub-menu">
+          <li><a href="about.html#story"><i class="fas fa-heart"></i> Our Story & Journey</a></li>
+          <li><a href="about.html#leadership-note"><i class="fas fa-user-tie"></i> Message from the CEO</a></li>
+          <li><a href="about.html#impact-approach"><i class="fas fa-seedling"></i> Grassroots Approach</a></li>
+          <li><a href="about.html#values"><i class="fas fa-check-circle"></i> Our 6 Core Values</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="contact.html" class="mobile-nav-link">
+          <span><i class="fas fa-phone-alt mobile-nav-icon"></i> Contact Us</span>
+        </a>
+      </li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="#payment-portal" class="btn btn-primary" style="width: 100%; border-radius: 50px; font-weight: 700; padding: 12px; text-align: center;"><i class="fas fa-heart"></i> Donate Now</a>
+      <button class="btn btn-outline" style="width: 100%; border-radius: 50px; font-weight: 600; padding: 10px;" onclick="openVolunteerModal('Mobile Drawer')"><i class="fas fa-user-plus"></i> Join as Volunteer</button>
+      <div class="drawer-quick-contact">
+        <a href="tel:+919100894893" class="quick-contact-btn"><i class="fas fa-phone-alt"></i> Call Us</a>
+        <a href="https://wa.me/919100894893" target="_blank" class="quick-contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Banner -->
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, #0c4fa8 100%); color: #fff; padding: 4.5rem 0; text-align: center;">
+    <div class="container">
+      <h1 style="color: #ffffff; margin-bottom: 1rem; font-size: 2.6rem; font-weight: 800;">Support Our Key Projects</h1>
+      <p style="color: rgba(255, 255, 255, 0.95); max-width: 780px; margin: 0 auto; font-size: 1.15rem; font-weight: 600;">
+        Empowering Children. Strengthening Schools. Transforming Communities.
+      </p>
+    </div>
+  </section>
+
+  <!-- Donation Portal Section -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Active Campaign Banner Spotlight -->
+      <div style="background: #ffffff; border-radius: 20px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); overflow: hidden; margin-bottom: 3.5rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0; align-items: center;">
+          <div style="padding: 2.5rem;">
+            <h2 style="font-size: 2rem; color: var(--secondary); margin-bottom: 12px; font-weight: 800; line-height: 1.25;">
+              EDUCATION TODAY, A BETTER TOMORROW
+            </h2>
+            <p style="font-size: 1.1rem; color: var(--accent); font-weight: 700; margin-bottom: 16px; font-style: italic;">
+              "Let's empower their dreams"
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+              Many children studying in government schools come from families who struggle to afford basic educational supplies. We are raising <strong>₹1,00,000/-</strong> to support <strong>500 students</strong> with essential items — notebooks, school bags, uniforms, or learning materials.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; margin-bottom: 24px;">
+              <div style="background: var(--bg-warm); padding: 12px 16px; border-radius: 12px; border-left: 4px solid var(--primary);">
+                <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Fundraising Goal</div>
+                <div style="font-size: 1.2rem; font-weight: 800; color: var(--secondary);">₹1,00,000</div>
+              </div>
+              <div style="background: var(--bg-warm); padding: 12px 16px; border-radius: 12px; border-left: 4px solid #10b981;">
+                <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Students Supported</div>
+                <div style="font-size: 1.2rem; font-weight: 800; color: #10b981;">500 Kids</div>
+              </div>
+              <div style="background: var(--bg-warm); padding: 12px 16px; border-radius: 12px; border-left: 4px solid var(--accent);">
+                <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Cost per Student</div>
+                <div style="font-size: 1.2rem; font-weight: 800; color: var(--accent);">₹200</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="#payment-portal" class="btn btn-primary"><i class="fas fa-heart"></i> Donate for 1 Child (₹200)</a>
+              <a href="#payment-portal" class="btn btn-outline"><i class="fas fa-qrcode"></i> Scan PhonePe QR</a>
+            </div>
+          </div>
+          <div style="text-align: center; background: #fafcff; padding: 2rem; border-left: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; cursor: pointer;" onclick="openPosterModal('assets/images/poster-education-campaign.jpg', 'Education Today, A Better Tomorrow', 'Raising ₹1,00,000 to support 500 government school students with notebooks, bags, uniforms, and learning materials (₹200 per child).', 'School Kit Donation')">
+            <img src="assets/images/poster-education-campaign.jpg" alt="Education Today, A Better Tomorrow - White Volunteers Foundation" style="max-width: 100%; max-height: 480px; border-radius: 16px; box-shadow: var(--shadow-md); object-fit: contain;">
+          </div>
+        </div>
+      </div>
+
+      <div id="payment-portal" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: flex-start;">
+        <!-- Left: Amount Selection & Impact Tiers -->
+        <div>
+          <h2 class="section-title align-left">Choose Your Impact Level</h2>
+          <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Select a preset amount or enter a custom sum. 100% of your donation is deployed transparently with verifiable receipts.</p>
+
+          <div class="donation-options">
+            <button type="button" class="donation-btn" data-amount="200">₹200 (1 Child)</button>
+            <button type="button" class="donation-btn active" data-amount="1000">₹1,000 (5 Kids)</button>
+            <button type="button" class="donation-btn" data-amount="2500">₹2,500</button>
+            <button type="button" class="donation-btn" data-amount="5000">₹5,000</button>
+            <button type="button" class="donation-btn" data-amount="custom">Custom</button>
+          </div>
+
+          <div class="input-group-custom">
+            <span class="input-prefix">₹</span>
+            <input type="number" id="donationAmount" value="1000" min="100" placeholder="Enter amount">
+          </div>
+
+          <!-- Impact Breakdown Info Box -->
+          <div style="background: var(--primary-light); border: 1px solid rgba(0, 168, 204, 0.2); border-radius: 14px; padding: 1.5rem; margin-bottom: 2rem;">
+            <h4 style="color: var(--primary-darker); margin-bottom: 0.8rem;">Where Your Contribution Goes:</h4>
+            <ul style="font-size: 0.92rem; color: var(--text-main); line-height: 1.9; list-style: none; padding-left: 0;">
+              <li><strong>₹200:</strong> Notebooks, essential writing stationery & learning materials for 1 student.</li>
+              <li><strong>₹1,000:</strong> Complete School Kit (Bag, books, geometry kit, stationery) for 5 students.</li>
+              <li><strong>₹2,500:</strong> 1 Month of morning nutritious milk (150ml daily) for 25 primary school children.</li>
+              <li><strong>₹5,000:</strong> Classroom infrastructure & colorful painting materials for 1 government school room.</li>
+              <li><strong>₹10,000:</strong> Digital learning lab & skill development kit for high school students.</li>
+            </ul>
+          </div>
+
+          <!-- 80G Certificate Request Form -->
+          <div style="background: #ffffff; padding: 1.75rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); margin-bottom: 1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--dark);">Request 80G Tax Exemption Receipt</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem;">After making your payment via PhonePe / UPI / Bank, enter your transaction reference below to receive your official 80G Tax Receipt.</p>
+            <form onsubmit="event.preventDefault(); showToast('Thank you! Your 80G tax receipt request has been recorded. Our accounts team will email the receipt.', 'success'); this.reset();">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <input type="text" class="form-control" placeholder="Donor Full Name" required>
+                <input type="text" class="form-control" placeholder="PAN Number (for 80G)" required>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <input type="email" class="form-control" placeholder="Email Address" required>
+                <input type="text" class="form-control" placeholder="UPI Reference / UTR Number" required>
+              </div>
+              <button type="submit" class="btn btn-outline" style="width: 100%;">Submit Payment Details for 80G Receipt</button>
+            </form>
+          </div>
+
+          <!-- Trust & Transparency Guarantee Box (Fills bottom-left empty space with colorful cards) -->
+          <div style="background: linear-gradient(135deg, #f0f7ff 0%, #e8f2ff 100%); border: 1.5px solid #bfdbfe; border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 6px 20px rgba(24, 119, 242, 0.08);">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <h4 style="color: #0f1c2e; font-size: 1.1rem; margin: 0; font-weight: 800; letter-spacing: -0.2px;">
+                Why Donate With Confidence?
+              </h4>
+              <span style="background: #1877f2; color: #ffffff; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">100% Verified NGO</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+              <!-- Card 1: Emerald Green -->
+              <div style="background: #f0fdf4; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #bbf7d0; border-top: 4px solid #10b981; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.08);">
+                <strong style="color: #166534; font-size: 0.9rem; display: block; margin-bottom: 4px; font-weight: 700;">
+                  100% Tax Deductible
+                </strong>
+                <span style="color: #374151; font-size: 0.81rem; line-height: 1.45; display: block;">
+                  Eligible for 50% Tax Exemption under Section 80G of Income Tax Act.
+                </span>
+              </div>
+              <!-- Card 2: Ocean Blue -->
+              <div style="background: #f0f9ff; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #bae6fd; border-top: 4px solid #0284c7; box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08);">
+                <strong style="color: #075985; font-size: 0.9rem; display: block; margin-bottom: 4px; font-weight: 700;">
+                  Complete Transparency
+                </strong>
+                <span style="color: #374151; font-size: 0.81rem; line-height: 1.45; display: block;">
+                  100% of contributions directly fund student kits, nutrition, and school infrastructure.
+                </span>
+              </div>
+              <!-- Card 3: Deep Orange -->
+              <div style="background: #fff7ed; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #fed7aa; border-top: 4px solid #f97316; box-shadow: 0 2px 8px rgba(249, 115, 22, 0.08);">
+                <strong style="color: #9a3412; font-size: 0.9rem; display: block; margin-bottom: 4px; font-weight: 700;">
+                  Government Verified
+                </strong>
+                <span style="color: #374151; font-size: 0.81rem; line-height: 1.45; display: block;">
+                  Registered NGO with NITI Aayog Darpan, 12A &amp; CSR-1 certifications.
+                </span>
+              </div>
+              <!-- Card 4: Purple/Indigo -->
+              <div style="background: #f5f3ff; padding: 14px 16px; border-radius: 12px; border: 1.5px solid #ddd6fe; border-top: 4px solid #8b5cf6; box-shadow: 0 2px 8px rgba(139, 92, 246, 0.08);">
+                <strong style="color: #5b21b6; font-size: 0.9rem; display: block; margin-bottom: 4px; font-weight: 700;">
+                  Fast Digital Receipt
+                </strong>
+                <span style="color: #374151; font-size: 0.81rem; line-height: 1.45; display: block;">
+                  Receive your official 80G tax receipt directly via email after verification.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: QR Code & Payment Options -->
+        <div>
+          <div class="payment-card">
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.2rem;">Instant UPI / QR Donation</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Scan with Google Pay, PhonePe, Paytm, or BHIM</p>
+
+            <!-- High-Quality Official PhonePe QR Code -->
+            <div style="background: #ffffff; padding: 20px; border-radius: 16px; border: 2px solid #5f259f; text-align: center; margin: 20px 0; box-shadow: var(--shadow-sm);">
+              <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px; color: #5f259f; font-weight: 700; font-size: 1.05rem;">
+                <span>PhonePe / GPay Accepted Here</span>
+              </div>
+              <img src="assets/images/phonepe-donation-qr.jpg" alt="Official PhonePe QR Code - White Volunteers Foundation" style="width: 220px; height: auto; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(95, 37, 159, 0.15); display: inline-block;" onerror="this.src='assets/images/logo.png'">
+              <p style="font-size: 0.88rem; font-weight: 800; color: #5f259f; margin-top: 12px; text-transform: uppercase; letter-spacing: 0.5px;">
+                WHITE VOLUNTEERS FOUNDATION
+              </p>
+              <div style="background: #f8fafc; padding: 8px 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                <span>UPI ID: <strong>urbandonors@ybl</strong></span>
+                <button class="btn btn-outline btn-sm" style="padding: 3px 8px; font-size: 0.75rem;" onclick="copyToClipboard('urbandonors@ybl', 'UPI ID')">Copy</button>
+              </div>
+            </div>
+
+            <!-- Direct Phone Number Transfer -->
+            <div class="phone-box" style="background: #f8fafc; border: 1.5px dashed var(--primary); padding: 18px; border-radius: 14px; text-align: center; margin-bottom: 18px;">
+              <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">GPay / PhonePe Mobile Number</span>
+              <div class="phone-number" style="font-size: 1.45rem; font-weight: 800; color: var(--secondary); margin: 8px 0; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <span>+91 91008 94893</span>
+              </div>
+              <div style="display: flex; gap: 8px; justify-content: center; margin-top: 10px;">
+                <button class="btn btn-primary btn-sm" onclick="copyToClipboard('+919100894893', 'GPay/PhonePe Number (9100894893)')">
+                  Copy Number
+                </button>
+                <a href="tel:+919100894893" class="btn btn-outline btn-sm">
+                  Call Support
+                </a>
+              </div>
+            </div>
+
+            <!-- Additional Official Foundation Helplines -->
+            <div style="background: #f1f5f9; padding: 14px 16px; border-radius: 12px; margin-bottom: 18px; font-size: 0.84rem; text-align: center;">
+              <span style="color: var(--text-muted); font-weight: 600;">Main Foundation Helplines:</span>
+              <div style="font-weight: 700; color: var(--secondary); margin-top: 4px;">
+                <a href="tel:+919100894893" style="color: var(--secondary);">+91 91008 94893</a> &bull; <a href="tel:+918400996611" style="color: var(--secondary);">+91 84009 96611</a> &bull; <a href="tel:+919186211983" style="color: var(--secondary);">+91 91862 11983</a>
+              </div>
+              <div style="color: var(--primary); font-weight: 600; margin-top: 4px;">
+                <a href="mailto:founderwvfindia@wvfindia.org">founderwvfindia@wvfindia.org</a>
+              </div>
+            </div>
+
+            <!-- Bank Transfer Coordinates -->
+            <div style="background: #fdfaf7; border: 1px solid #f1e7dc; border-radius: 14px; padding: 1.2rem; text-align: left;">
+              <h5 style="color: var(--primary); font-size: 0.95rem; margin-bottom: 0.5rem;">Direct NEFT / RTGS Bank Transfer</h5>
+              <div style="font-size: 0.82rem; color: var(--text-main); line-height: 1.6;">
+                <div><strong>Account Name:</strong> White Volunteers Foundation</div>
+                <div><strong>Bank Name:</strong> State Bank of India / HDFC</div>
+                <div><strong>Branch:</strong> Greater Hyderabad, Keesara</div>
+                <div><strong>Exemption:</strong> 80G Tax Exemption Eligible</div>
+                <div style="margin-top: 0.5rem;">
+                  <button class="btn btn-primary btn-sm" onclick="copyToClipboard('founderwvfindia@wvfindia.org', 'Accounts Office Email')">Contact Accounts Office</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-brand-logo-wrap">
+              <img src="assets/images/logo.png" alt="White Volunteer's Foundation" class="footer-brand-logo-img">
+            </a>
+            <p>Empowering children, youth, and communities in India through education, nutrition aid, school renovation, and social service.</p>
+
+            <!-- Technology & Digital Partner -->
+            <div class="footer-tech-partner-card">
+              <div class="footer-tech-partner-label">Technology &amp; Digital Partner</div>
+              <a href="https://raambow.com" target="_blank" rel="noopener" class="dev-brand-badge-lg" title="RaamBow TechSolutions - Digital Partner">
+                <img src="assets/images/raambow-techsolutions-logo.png" alt="RaamBow TechSolutions" class="dev-brand-logo-lg">
+              </a>
+              <div style="font-size: 0.74rem; color: #94a3b8; font-weight: 500;">Digital Transformation &amp; Web Partner</div>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+              <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+              <li><a href="programs.html"><i class="fas fa-angle-right"></i> Causes & Programs</a></li>
+              <li><a href="volunteer.html"><i class="fas fa-angle-right"></i> Join as Volunteer</a></li>
+              <li><a href="donate.html"><i class="fas fa-angle-right"></i> Donate Online (80G)</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Certifications</h4>
+            <ul class="footer-links">
+              <li><a href="about.html#financials"><i class="fas fa-check-circle"></i> Section 80G Tax Exemption</a></li>
+              <li><a href="about.html#financials"><i class="fas fa-check-circle"></i> 12A Charitable Trust</a></li>
+              <li><a href="about.html#financials"><i class="fas fa-check-circle"></i> CSR-1 Implementing Agency</a></li>
+              <li><a href="about.html#financials"><i class="fas fa-check-circle"></i> NITI Aayog Darpan Verified</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>National HQ</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>#10-551, Nagaram, Keesara, Greater Hyderabad, Telangana - 500083</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span><a href="tel:+919100894893" style="color: inherit;">+91 91008 94893</a> / <a href="tel:+918400996611" style="color: inherit;">84009 96611</a></span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span><a href="mailto:founderwvfindia@wvfindia.org" style="color: inherit;">founderwvfindia@wvfindia.org</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div>&copy; 2025–2026 White Volunteers Foundation NGO. All Rights Reserved.</div>
+        <div><a href="contact.html">Privacy Policy</a> | <a href="contact.html">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals (Global Interactive System) -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="projectModalTitle">Project Details</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="projectModalBody"></div>
+      <div class="modal-footer" id="projectModalFooter"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="detailsModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="detailsModalTitle">Details</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="detailsModalBody"></div>
+      <div class="modal-footer" id="detailsModalFooter">
+        <button class="btn btn-outline" onclick="closeAllModals()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="videoModalTitle"><i class="fab fa-youtube" style="color: #ff0000;"></i> Video Documentary</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="video-modal-wrap" id="videoPlayerWrap"></div>
+        <p id="videoModalDesc" style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0;"></p>
+      </div>
+      <div class="modal-footer">
+        <a id="videoModalDirectLink" href="https://www.youtube.com/@WhiteVolunteersFoundation" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-youtube"></i> Watch on YouTube</a>
+        <button class="btn btn-primary btn-sm" onclick="closeAllModals()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pure Full-View Poster Lightbox Modal (No Text, Pure Image) -->
+  <div class="modal-overlay poster-lightbox-overlay" id="posterModal" onclick="if(event.target === this) closeAllModals()">
+    <button class="poster-lightbox-close" onclick="closeAllModals()" aria-label="Close Lightbox">&times;</button>
+    <div class="poster-lightbox-container">
+      <img src="" alt="Campaign Poster" id="posterModalImg" class="poster-lightbox-img">
+      <div class="poster-lightbox-actions" id="posterModalActions"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="volunteerModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Volunteer Registration Form</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="handleVolunteerSubmit(event)">
+          <div class="form-group">
+            <label for="volName">Full Name *</label>
+            <input type="text" id="volName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="volPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="volPhone" class="form-control" placeholder="+91 91008 94893" required>
+            </div>
+            <div class="form-group">
+              <label for="volEmail">Email *</label>
+              <input type="email" id="volEmail" class="form-control" placeholder="rahul@example.com" required>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="volCity">Your City *</label>
+              <input type="text" id="volCity" class="form-control" placeholder="Hyderabad" required>
+            </div>
+            <div class="form-group">
+              <label for="volDomain">Area of Interest *</label>
+              <select id="volDomain" class="form-control">
+                <option value="1. School Renovation & Infrastructure">1. School Renovation & Infrastructure</option>
+                <option value="2. Stationery & Learning Materials">2. Stationery & Learning Materials</option>
+                <option value="3. Skill Development for Students">3. Student Skill Development</option>
+                <option value="4. Digital Library in Govt Schools">4. Digital Library in Schools</option>
+                <option value="5. Women Empowerment">5. Women Empowerment</option>
+                <option value="Community Connect Internship">Community Connect Internship</option>
+                <option value="Weekend School Seva">Weekend School Seva</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; margin-top: 10px;">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="donateModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Support White Volunteers Foundation</h3>
+        <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 1.2rem;">
+          <span class="badge" style="background: #f0fdf4; color: #15803d; font-weight: 700; font-size: 0.82rem; margin-bottom: 6px;">80G TAX EXEMPTION BENEFIT</span>
+          <h4 style="color: var(--secondary); font-size: 1.2rem; margin-bottom: 4px;">Make an Instant Contribution</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Supporting: <strong id="donateModalCause" style="color: var(--primary);">Education & Nutrition Programs</strong></p>
+        </div>
+
+        <div class="payment-card" style="padding: 20px; box-shadow: none; border: 1px solid #e2e8f0; border-radius: 14px; margin-bottom: 15px;">
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--secondary); margin-bottom: 8px;">
+            <i class="fas fa-qrcode" style="color: #5f259f;"></i> Scan Official PhonePe QR Code:
+          </div>
+          <div style="text-align: center; margin-bottom: 12px;">
+            <img src="assets/images/phonepe-donation-qr.jpg" alt="White Volunteers Foundation PhonePe QR" style="max-width: 200px; height: auto; border-radius: 10px; border: 1px solid #e2e8f0; margin: 0 auto; display: block;" onerror="this.src='assets/images/logo.png'">
+          </div>
+          <div style="background: #f8fafc; padding: 10px 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>UPI ID: <strong>urbandonors@ybl</strong></span>
+            <button class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.78rem;" onclick="copyToClipboard('urbandonors@ybl', 'UPI ID')"><i class="fas fa-copy"></i> Copy</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeAllModals()">Close</button>
+        <a href="donate.html" class="btn btn-primary"><i class="fas fa-receipt"></i> Full 80G Page</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

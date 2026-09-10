@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 540" width="100%" height="100%">
+  <defs>
+    <style>
+      .logo-bold { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Montserrat, Arial Black, sans-serif; font-weight: 900; }
+      .logo-script { font-family: "Segoe Print", "Bradley Hand", "Caveat", "Comic Sans MS", cursive, sans-serif; font-weight: 700; }
+    </style>
+  </defs>
+
+  <!-- Jumping figure (Arms raised celebrating, forming the middle of H) -->
+  <g transform="translate(142, 16)">
+    <!-- Head -->
+    <circle cx="68" cy="74" r="19" fill="#1877f2" />
+    
+    <!-- Body with energetic limbs forming the H center -->
+    <path d="M 68 96 
+             C 60 108, 54 123, 52 140
+             C 50 156, 46 195, 34 235
+             C 32 242, 28 248, 25 254
+             C 27 254, 30 252, 33 248
+             C 37 242, 42 232, 44 220
+             C 47 205, 52 175, 58 155
+             C 64 175, 72 205, 78 220
+             C 80 226, 84 238, 86 242
+             C 88 238, 86 230, 84 220
+             C 80 195, 76 158, 74 142
+             C 72 125, 68 108, 68 96 Z" 
+          fill="#1877f2" />
+
+    <!-- Left Arm Raised Up -->
+    <path d="M 58 106 
+             C 45 90, 30 66, 20 42 
+             C 17 36, 14 28, 10 20 
+             C 8 16, 5 16, 6 20 
+             C 8 26, 12 34, 14 40 
+             C 10 34, 6 28, 4 26 
+             C 2 24, 0 26, 2 30 
+             C 5 36, 12 46, 16 52 
+             C 12 48, 8 44, 6 44 
+             C 4 44, 4 46, 6 50 
+             C 10 58, 20 70, 25 76 
+             C 36 92, 48 112, 56 120 Z" 
+          fill="#1877f2" />
+
+    <!-- Right Arm Raised Up -->
+    <path d="M 78 106 
+             C 91 90, 106 66, 116 42 
+             C 119 36, 122 28, 126 20 
+             C 128 16, 131 16, 130 20 
+             C 128 26, 124 34, 122 40 
+             C 126 34, 130 28, 132 26 
+             C 134 24, 136 26, 134 30 
+             C 131 36, 124 46, 120 52 
+             C 124 48, 128 44, 130 44 
+             C 132 44, 132 46, 130 50 
+             C 126 58, 116 70, 111 76 
+             C 100 92, 88 112, 80 120 Z" 
+          fill="#1877f2" />
+
+    <!-- Left Leg dynamic splash -->
+    <path d="M 33 248 C 28 255, 20 262, 18 266 C 22 265, 28 260, 32 254 Z" fill="#1877f2" />
+    <circle cx="28" cy="242" r="3" fill="#1877f2" />
+  </g>
+
+  <!-- Main Title: WHITE -->
+  <g class="logo-bold" fill="#000000">
+    <text x="25" y="245" font-size="140" letter-spacing="-2">W</text>
+    <rect x="180" y="125" width="20" height="120" rx="2" fill="#000000" />
+    <rect x="180" y="178" width="70" height="20" fill="#000000" />
+    <rect x="235" y="125" width="20" height="120" rx="2" fill="#000000" />
+    <text x="272" y="245" font-size="140" letter-spacing="4">ITE</text>
+  </g>
+
+  <!-- Subtitle: VOLUNTEER'S -->
+  <text x="250" y="335" text-anchor="middle" class="logo-bold" font-size="64" letter-spacing="1" fill="#000000">VOLUNTEER'S</text>
+
+  <!-- Subtitle: FOUNDATION -->
+  <text x="250" y="398" text-anchor="middle" class="logo-bold" font-size="44" letter-spacing="12" fill="#000000">FOUNDATION</text>
+
+  <!-- Full Crisp Tagline: Together, We Can Change Lives. -->
+  <text x="250" y="475" text-anchor="middle" class="logo-script" font-size="42" fill="#1877f2" letter-spacing="0.5">Together, We Can Change Lives.</text>
+</svg>
