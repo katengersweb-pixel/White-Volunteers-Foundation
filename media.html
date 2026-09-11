@@ -395,6 +395,44 @@
           </div>
         </div>
 
+        <!-- 99TV News Feature Card -->
+        <div class="press-article-card" style="background: linear-gradient(135deg, #ffffff 0%, #fefce8 100%); display: flex; flex-direction: column;">
+          <div class="press-badge-header">
+            <span class="press-source-logo" style="color: #ca8a04;"><i class="fas fa-tv"></i> 99TV TELUGU NEWS</span>
+            <span class="badge" style="background: #fef08a; color: #854d0e; font-size: 0.78rem;">TV Broadcast</span>
+          </div>
+          <div class="press-body">
+            <h3 style="font-size: 1.25rem; color: var(--secondary); margin-bottom: 12px; line-height: 1.4;">
+              ఆదర్శముగా నిలుస్తున్న వైట్ వాలంటీర్స్ ఫౌండేషన్ సేవా కార్యక్రమాలు
+            </h3>
+            <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-main); margin-bottom: 15px;">
+              <strong>99TV News:</strong> "సేవే లక్ష్యం - ప్రేమే మార్గం" నినాదంతో ప్రభుత్వ పాఠశాలల్లోని పేద విద్యార్థులకు ఉదయం పౌష్టికాహారం, విద్యా సామగ్రి అందిస్తూ వేలాది మంది చిన్నారుల భవిష్యత్తుకు బాటలు వేస్తున్న వైట్ వాలంటీర్స్ ఫౌండేషన్ ప్రత్యేక కథనం.
+            </p>
+            <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
+              <button class="btn btn-outline btn-sm" style="color: #ca8a04; border-color: #ca8a04; flex: 1; text-align: center;" onclick="openVideoModal('uvKlQ1rM92g', 'Inspiring Social Service by White Volunteers Foundation | 99TV News', '99TV Telugu')"><i class="fab fa-youtube" style="color: #ff0000;"></i> Watch on 99TV</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Time Today News Card -->
+        <div class="press-article-card" style="background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%); display: flex; flex-direction: column;">
+          <div class="press-badge-header">
+            <span class="press-source-logo" style="color: #16a34a;"><i class="fas fa-broadcast-tower"></i> TIME TODAY NEWS</span>
+            <span class="badge" style="background: #dcfce7; color: #15803d; font-size: 0.78rem;">Ground Coverage</span>
+          </div>
+          <div class="press-body">
+            <h3 style="font-size: 1.25rem; color: var(--secondary); margin-bottom: 12px; line-height: 1.4;">
+              అల్వాల్ ZPHS బాలికల పాఠశాలలో వైట్ వాలంటీర్స్ ఫౌండేషన్ సేవ
+            </h3>
+            <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-main); margin-bottom: 15px;">
+              <strong>Time Today News:</strong> అల్వాల్‌లోని జిల్లా పరిషత్ బాలికల ఉన్నత పాఠశాలలో విద్యార్థినులకు పుస్తకాలు, స్కూల్ బ్యాగులు, అవసరమైన సహాయాన్ని అందిస్తూ అండగా నిలిచిన వైట్ వాలంటీర్స్ ఫౌండేషన్ సేవా కార్యక్రమం.
+            </p>
+            <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
+              <button class="btn btn-outline btn-sm" style="color: #16a34a; border-color: #16a34a; flex: 1; text-align: center;" onclick="openVideoModal('BOHIZTM_lCo', 'ZPHS Girls High School Alwal Service Drive | Time Today News', 'Time Today Tv Telugu')"><i class="fab fa-youtube" style="color: #ff0000;"></i> Watch on Time Today</button>
+            </div>
+          </div>
+        </div>
+
         <!-- Founder Profile Card with Authentic Photo -->
         <div class="press-article-card" style="background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%); display: flex; flex-direction: column;">
           <div class="press-badge-header" style="background: transparent;">
@@ -463,7 +501,35 @@
 
         <div class="video-carousel-container">
           <div class="video-carousel-track">
-            <!-- Video Card 1 -->
+            <!-- Video Card 1: 99TV News Broadcast -->
+            <div class="video-stream-card" onclick="openVideoModal('uvKlQ1rM92g', 'Inspiring Social Service Initiatives by White Volunteers Foundation', '99TV Telugu')">
+              <div class="video-thumb-wrap" style="cursor: pointer;">
+                <img src="https://img.youtube.com/vi/uvKlQ1rM92g/hqdefault.jpg" alt="99TV News Feature - White Volunteers Foundation" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/classroom-notebooks-students.jpg'">
+                <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="video-stream-body">
+                <span class="video-stream-tag"><i class="fas fa-tv"></i> 99TV Telugu • Special Story</span>
+                <h4 class="video-stream-title">ఆదర్శముగా నిలుస్తున్న వైట్ వాలంటీర్స్ ఫౌండేషన్ సేవలు</h4>
+                <p class="video-stream-desc">Special 99TV Telugu news report on daily morning nutrition, school renovation, and selfless community seva across Telangana.</p>
+                <span class="video-stream-link"><i class="fas fa-play-circle"></i> Watch Video Document</span>
+              </div>
+            </div>
+
+            <!-- Video Card 2: Time Today News Broadcast -->
+            <div class="video-stream-card" onclick="openVideoModal('BOHIZTM_lCo', 'ZPHS Girls High School Alwal Service Drive', 'Time Today News')">
+              <div class="video-thumb-wrap" style="cursor: pointer;">
+                <img src="https://img.youtube.com/vi/BOHIZTM_lCo/hqdefault.jpg" alt="Time Today News - ZPHS Girls High School Alwal" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/classroom-distribution-1.jpg'">
+                <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+              </div>
+              <div class="video-stream-body">
+                <span class="video-stream-tag"><i class="fas fa-school"></i> Time Today News • Alwal Seva</span>
+                <h4 class="video-stream-title">ZPHS Girls High School Alwal Welfare &amp; Stationery Drive</h4>
+                <p class="video-stream-desc">Ground coverage of White Volunteers Foundation distributing essential learning kits and student welfare support in Alwal.</p>
+                <span class="video-stream-link"><i class="fas fa-play-circle"></i> Watch Video Document</span>
+              </div>
+            </div>
+
+            <!-- Video Card 3 -->
             <div class="video-stream-card" onclick="openVideoModal('GFpZqW8Y1V8', 'Morning Nutrition & 150ml Milk Aid in Govt Schools', 'Vanitha TV')">
               <div class="video-thumb-wrap" style="cursor: pointer;">
                 <img src="https://img.youtube.com/vi/GFpZqW8Y1V8/hqdefault.jpg" alt="Morning Nutrition & Milk Distribution" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/classroom-notebooks-students.jpg'">
@@ -477,7 +543,7 @@
               </div>
             </div>
 
-            <!-- Video Card 2 -->
+            <!-- Video Card 4 -->
             <div class="video-stream-card" onclick="openVideoModal('VczlR0_3lSI', 'Govt School Infrastructure & Classroom Beautification', 'hmtv News')">
               <div class="video-thumb-wrap" style="cursor: pointer;">
                 <img src="https://img.youtube.com/vi/VczlR0_3lSI/hqdefault.jpg" alt="School Renovation & Painting" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/classroom-distribution-1.jpg'">
@@ -491,7 +557,7 @@
               </div>
             </div>
 
-            <!-- Video Card 3 -->
+            <!-- Video Card 5 -->
             <div class="video-stream-card" onclick="openVideoModal('FXvdf0cK0Ng', 'Free School Bags, Notebooks & Stationery Distribution', 'Kakatiya TV')">
               <div class="video-thumb-wrap" style="cursor: pointer;">
                 <img src="https://img.youtube.com/vi/FXvdf0cK0Ng/hqdefault.jpg" alt="School Kits & Stationery Distribution" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/classroom-notebooks-students.jpg'">
@@ -505,7 +571,7 @@
               </div>
             </div>
 
-            <!-- Video Card 4 -->
+            <!-- Video Card 6 -->
             <div class="video-stream-card" onclick="openVideoModal('tF_bCGXZY4Y', 'Skill Development & Digital Literacy for Govt School Kids', 'ETV News')">
               <div class="video-thumb-wrap" style="cursor: pointer;">
                 <img src="https://img.youtube.com/vi/tF_bCGXZY4Y/hqdefault.jpg" alt="Student Skill Development & Digital Learning" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/classroom-volunteers-students.jpg'">
@@ -519,7 +585,7 @@
               </div>
             </div>
 
-            <!-- Video Card 5 -->
+            <!-- Video Card 7 -->
             <div class="video-stream-card" onclick="openVideoModal('a2jBeFwMCTw', 'Spreading Smiles: Weekend Volunteering in Action', 'White Volunteers Foundation')">
               <div class="video-thumb-wrap" style="cursor: pointer;">
                 <img src="https://img.youtube.com/vi/a2jBeFwMCTw/hqdefault.jpg" alt="Youth Volunteers in Action" class="video-thumb-img" loading="lazy" onerror="this.src='assets/images/volunteers-children-community-hall.jpg'">
