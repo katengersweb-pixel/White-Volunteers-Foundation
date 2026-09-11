@@ -968,10 +968,14 @@ async function sendEmailNotification(subject, formDataObj, replyToEmail) {
       },
       body: JSON.stringify(payload)
     });
-    return response.ok;
+    const data = await response.json().catch(() => ({}));
+    if (data && data.message && data.message.toLowerCase().includes("activation")) {
+      showToast("Activation Required: Please open urbandonors@gmail.com and click 'Activate Form' once!", "info");
+    }
+    return { ok: response.ok, data };
   } catch (err) {
     console.warn("Direct email delivery attempt:", err);
-    return false;
+    return { ok: false, error: err };
   }
 }
 
