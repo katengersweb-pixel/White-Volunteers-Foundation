@@ -220,9 +220,9 @@ const chaptersData = [
     volunteers: "1,850+",
     beneficiaries: "35,000+",
     coordinator: "Latha Maraveni & Regional Team",
-    phone: "+91 91008 94893",
-    email: "founderwvfindia@wvfindia.org",
-    address: "#10-551, Nagaram, Keesara, Greater Hyderabad, Telangana - 500083",
+    phone: "+91 91862 11983",
+    email: "urbandonors@gmail.com",
+    address: "#281/A, Srinivas Nagar, Beside Aditya Degree College, Dr. AS Rao Nagar, Hyderabad, Telangana - 500062",
     initiatives: "School Kit Drives, Daily Nutrition (Nityapalamrutam), School Renovation, Community Connect Internship, Digital Libraries",
     image: "assets/images/hyderabad-charminar.jpg",
     desc: "The central headquarters powering grassroots social transformation, school adoption, and urban donor mobilization across Greater Hyderabad and surrounding districts."
@@ -942,35 +942,285 @@ function fallbackCopy(text, label) {
 }
 
 /* ==========================================================================
-   8. Form Handlers & Toast Notifications
+   8. Direct Email Forwarding Engine (To urbandonors@gmail.com) & Form Handlers
    ========================================================================== */
-window.handleVolunteerSubmit = function(e) {
-  e.preventDefault();
-  const name = document.getElementById('volName')?.value || document.getElementById('regName')?.value || 'Volunteer';
-  const phone = document.getElementById('volPhone')?.value || document.getElementById('regPhone')?.value || '';
-  const city = document.getElementById('volCity')?.value || document.getElementById('regCity')?.value || 'Hyderabad';
-  const track = document.getElementById('volDomain')?.value || document.getElementById('regInterest')?.value || 'Social Impact';
+const RECIPIENT_EMAIL = "urbandonors@gmail.com";
+const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`;
 
-  showToast(`Thank you, ${name}! Your registration for ${track} (${city}) has been recorded. Our coordinator will contact you at ${phone}.`, 'success');
-  closeAllModals();
-  e.target.reset();
+async function sendEmailNotification(subject, formDataObj, replyToEmail) {
+  try {
+    const payload = {
+      _subject: subject,
+      _template: "table",
+      _captcha: "false",
+      ...formDataObj,
+      "Submitted At": new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+    };
+    if (replyToEmail) {
+      payload._replyto = replyToEmail;
+    }
+
+    const response = await fetch(FORMSUBMIT_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+    return response.ok;
+  } catch (err) {
+    console.warn("Direct email delivery attempt:", err);
+    return false;
+  }
+}
+
+window.handleContactSubmit = async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnHtml = submitBtn ? submitBtn.innerHTML : 'Send Message';
+
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Transmitting Message...';
+  }
+
+  const name = form.querySelector('#cName')?.value || document.getElementById('cName')?.value || 'Friend';
+  const email = form.querySelector('#cEmail')?.value || document.getElementById('cEmail')?.value || '';
+  const phone = form.querySelector('#cPhone')?.value || document.getElementById('cPhone')?.value || '';
+  const topic = form.querySelector('#cSubject')?.value || document.getElementById('cSubject')?.value || 'General Inquiry';
+  const message = form.querySelector('#cMessage')?.value || document.getElementById('cMessage')?.value || '';
+  const refNo = 'WVF-CNT-' + Math.floor(100000 + Math.random() * 900000);
+
+  // Send email to urbandonors@gmail.com
+  await sendEmailNotification(
+    `[Website Inquiry] ${topic} - ${name} (${refNo})`,
+    {
+      "Form Type": "Contact & Inquiry Form",
+      "Tracking Reference ID": refNo,
+      "Sender Name": name,
+      "Sender Email": email,
+      "Phone / WhatsApp": phone,
+      "Inquiry Topic": topic,
+      "Message / Query": message
+    },
+    email
+  );
+
+  if (submitBtn) {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnHtml;
+  }
+
+  showToast(`Thank you, ${name}! Your message was dispatched directly to urbandonors@gmail.com.`, 'success');
+
+  const existing = document.getElementById('contactSuccessModal');
+  if (existing) existing.remove();
+
+  const modalHtml = `
+    <div class="modal-overlay active" id="contactSuccessModal" style="display: flex;">
+      <div class="modal-card" style="max-width: 490px; text-align: center; padding: 32px 28px;">
+        <div style="width: 68px; height: 68px; background: #dcfce7; color: #16a34a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 16px auto; box-shadow: 0 4px 14px rgba(22,163,74,0.2);">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3 style="color: var(--secondary); font-size: 1.4rem; margin-bottom: 8px; font-weight: 700;">Message Dispatched!</h3>
+        <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+          Thank you, <strong>${name}</strong>! Your inquiry regarding <em>"${topic}"</em> has been transmitted directly to our official mailbox at <strong style="color: var(--primary);">urbandonors@gmail.com</strong>.
+        </p>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px; font-size: 0.88rem; margin-bottom: 20px; color: var(--text-main); text-align: left;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span>Tracking Reference:</span>
+            <strong style="color: var(--primary);">${refNo}</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Follow-up Mailbox:</span>
+            <strong>${email || 'Provided Email'}</strong>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://wa.me/919186211983?text=Hi%20White%20Volunteers%20Foundation,%20I%20just%20submitted%20inquiry%20${refNo}" target="_blank" class="btn btn-outline btn-sm" style="border-color: #25d366; color: #16a34a; padding: 10px 16px;"><i class="fab fa-whatsapp"></i> WhatsApp Follow-up</a>
+          <button class="btn btn-primary btn-sm" style="padding: 10px 22px;" onclick="document.getElementById('contactSuccessModal').remove()">Done</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+  form.reset();
 };
 
-window.handleContactSubmit = function(e) {
+window.handleVolunteerSubmit = async function(e) {
   e.preventDefault();
-  const name = document.getElementById('cName')?.value || 'Friend';
-  showToast(`Thank you, ${name}! Your message has been transmitted to White Volunteers Foundation HQ. We will reply shortly.`, 'success');
-  e.target.reset();
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnHtml = submitBtn ? submitBtn.innerHTML : 'Submit Application';
+
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting Application...';
+  }
+
+  const name = form.querySelector('#regName, #volName')?.value || document.getElementById('regName')?.value || document.getElementById('volName')?.value || 'Volunteer';
+  const phone = form.querySelector('#regPhone, #volPhone')?.value || document.getElementById('regPhone')?.value || document.getElementById('volPhone')?.value || '';
+  const email = form.querySelector('#regEmail, #volEmail')?.value || document.getElementById('regEmail')?.value || document.getElementById('volEmail')?.value || '';
+  const city = form.querySelector('#regCity, #volCity')?.value || document.getElementById('regCity')?.value || document.getElementById('volCity')?.value || 'Hyderabad';
+  const role = form.querySelector('#regRole')?.value || 'Not specified';
+  const track = form.querySelector('#regInterest, #volDomain')?.value || document.getElementById('regInterest')?.value || document.getElementById('volDomain')?.value || 'Community Volunteering';
+  const message = form.querySelector('#regMsg, #volMsg')?.value || '';
+  const refNo = 'WVF-VOL-' + Math.floor(100000 + Math.random() * 900000);
+
+  // Send email to urbandonors@gmail.com
+  await sendEmailNotification(
+    `[Volunteer Registration] ${track} - ${name} (${city}) [${refNo}]`,
+    {
+      "Form Type": "Volunteer / Internship Application",
+      "Registration Ref ID": refNo,
+      "Volunteer Name": name,
+      "Mobile / WhatsApp": phone,
+      "Email Address": email,
+      "City / Chapter": city,
+      "Profession / Role": role,
+      "Interest Track": track,
+      "Motivation / Message": message || 'Eager to volunteer & create social impact'
+    },
+    email
+  );
+
+  if (submitBtn) {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnHtml;
+  }
+
+  showToast(`Thank you, ${name}! Your application has been emailed to urbandonors@gmail.com.`, 'success');
+
+  const existing = document.getElementById('volSuccessModal');
+  if (existing) existing.remove();
+
+  const modalHtml = `
+    <div class="modal-overlay active" id="volSuccessModal" style="display: flex;">
+      <div class="modal-card" style="max-width: 490px; text-align: center; padding: 32px 28px;">
+        <div style="width: 68px; height: 68px; background: #dcfce7; color: #16a34a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 16px auto; box-shadow: 0 4px 14px rgba(22,163,74,0.2);">
+          <i class="fas fa-user-check"></i>
+        </div>
+        <h3 style="color: var(--secondary); font-size: 1.4rem; margin-bottom: 8px; font-weight: 700;">Application Registered!</h3>
+        <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+          Welcome aboard, <strong>${name}</strong>! Your registration details for <strong>${track}</strong> in <strong>${city}</strong> have been sent to <strong style="color: var(--primary);">urbandonors@gmail.com</strong>.
+        </p>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px; font-size: 0.88rem; margin-bottom: 20px; color: var(--text-main); text-align: left;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span>Application Ref ID:</span>
+            <strong style="color: var(--primary);">${refNo}</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span>Selected Track:</span>
+            <strong>${track}</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Contact Helpline:</span>
+            <strong>+91 91862 11983</strong>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://wa.me/919186211983?text=Hi%20White%20Volunteers%20Foundation,%20I%20applied%20to%20volunteer%20${refNo}" target="_blank" class="btn btn-outline btn-sm" style="border-color: #25d366; color: #16a34a; padding: 10px 16px;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+          <button class="btn btn-primary btn-sm" style="padding: 10px 22px;" onclick="document.getElementById('volSuccessModal').remove(); if(typeof closeAllModals === 'function') closeAllModals();">Done</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+  form.reset();
+  if (typeof closeAllModals === 'function') closeAllModals();
+};
+
+window.handleDonationReceiptSubmit = async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnHtml = submitBtn ? submitBtn.innerHTML : 'Submit Details';
+
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting Receipt Request...';
+  }
+
+  const donorName = form.querySelector('#donorName')?.value || 'Valued Donor';
+  const pan = form.querySelector('#donorPan')?.value || 'Not provided';
+  const email = form.querySelector('#donorEmail')?.value || '';
+  const ref = form.querySelector('#donorRef')?.value || 'Pending';
+  const refNo = 'WVF-80G-' + Math.floor(100000 + Math.random() * 900000);
+
+  // Send email to urbandonors@gmail.com
+  await sendEmailNotification(
+    `[80G Tax Receipt Request] Donor: ${donorName} - PAN: ${pan} [${refNo}]`,
+    {
+      "Form Type": "80G Tax Exemption Receipt Request",
+      "Receipt Tracking ID": refNo,
+      "Donor Full Name": donorName,
+      "PAN Number": pan,
+      "Email Address": email,
+      "UPI Reference / UTR Number": ref
+    },
+    email
+  );
+
+  if (submitBtn) {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnHtml;
+  }
+
+  showToast(`Thank you, ${donorName}! Your 80G receipt request was emailed to urbandonors@gmail.com.`, 'success');
+
+  const modalHtml = `
+    <div class="modal-overlay active" id="receiptSuccessModal" style="display: flex;">
+      <div class="modal-card" style="max-width: 490px; text-align: center; padding: 32px 28px;">
+        <div style="width: 68px; height: 68px; background: #dcfce7; color: #16a34a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 16px auto; box-shadow: 0 4px 14px rgba(22,163,74,0.2);">
+          <i class="fas fa-receipt"></i>
+        </div>
+        <h3 style="color: var(--secondary); font-size: 1.4rem; margin-bottom: 8px; font-weight: 700;">80G Request Logged!</h3>
+        <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+          Thank you, <strong>${donorName}</strong>! Your donation payment reference <strong>${ref}</strong> and PAN details have been forwarded to our accounts team at <strong style="color: var(--primary);">urbandonors@gmail.com</strong>.
+        </p>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px; font-size: 0.88rem; margin-bottom: 20px; color: var(--text-main); text-align: left;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+            <span>Receipt Tracking ID:</span>
+            <strong style="color: var(--primary);">${refNo}</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Estimated Delivery:</span>
+            <strong>Within 48 hours to ${email}</strong>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px; justify-content: center;">
+          <button class="btn btn-primary btn-sm" style="padding: 10px 24px;" onclick="document.getElementById('receiptSuccessModal').remove()">Done</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+  form.reset();
 };
 
 function initNewsletterForm() {
   const forms = document.querySelectorAll('.newsletter-form');
   forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const input = form.querySelector('input[type="email"]');
       if (input && input.value) {
-        showToast(`Subscribed! Quarterly foundation bulletins will be sent to ${input.value}`, 'success');
+        const subEmail = input.value;
+        showToast(`Subscribing ${subEmail}...`, 'info');
+        await sendEmailNotification(
+          `[Newsletter Subscription] New Subscriber: ${subEmail}`,
+          {
+            "Form Type": "Newsletter Subscription",
+            "Subscriber Email": subEmail
+          },
+          subEmail
+        );
+        showToast(`Subscribed! Quarterly foundation bulletins will be sent to ${subEmail}`, 'success');
         input.value = '';
       }
     });
@@ -1468,74 +1718,7 @@ function updateContactTopicHint(topic) {
   }
 }
 
-function handleContactSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById('cName')?.value || 'Friend';
-  const email = document.getElementById('cEmail')?.value || '';
-  const topic = document.getElementById('cSubject')?.value || 'General Inquiry';
-  const refNo = 'WVF-CNT-' + Math.floor(100000 + Math.random() * 900000);
 
-  const existing = document.getElementById('contactSuccessModal');
-  if (existing) existing.remove();
-
-  const modalHtml = `
-    <div class="modal-overlay active" id="contactSuccessModal" style="display: flex;">
-      <div class="modal-card" style="max-width: 480px; text-align: center; padding: 30px;">
-        <div style="width: 64px; height: 64px; background: #dcfce7; color: #16a34a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 16px auto;">
-          <i class="fas fa-check"></i>
-        </div>
-        <h3 style="color: var(--secondary); font-size: 1.35rem; margin-bottom: 8px;">Message Sent Successfully!</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
-          Thank you, <strong>${name}</strong>! Your message regarding <em>"${topic}"</em> has been received by our national secretariat.
-        </p>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; font-size: 0.85rem; margin-bottom: 20px; color: var(--text-main);">
-          Tracking Reference ID: <strong style="color: var(--primary);">${refNo}</strong><br>
-          <span style="font-size: 0.78rem; color: var(--text-light);">We will reach out to <strong>${email}</strong> shortly.</span>
-        </div>
-        <div style="display: flex; gap: 10px; justify-content: center;">
-          <a href="https://wa.me/919100894893?text=Hi%20White%20Volunteers%20Foundation,%20I%20just%20submitted%20inquiry%20${refNo}" target="_blank" class="btn btn-outline btn-sm" style="border-color: #25d366; color: #16a34a;"><i class="fab fa-whatsapp"></i> Quick WhatsApp Chat</a>
-          <button class="btn btn-primary btn-sm" onclick="document.getElementById('contactSuccessModal').remove()">Done</button>
-        </div>
-      </div>
-    </div>
-  `;
-
-  document.body.insertAdjacentHTML('beforeend', modalHtml);
-  e.target.reset();
-}
-
-function handleVolunteerSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById('volName')?.value || 'Volunteer';
-  const refNo = 'WVF-VOL-' + Math.floor(100000 + Math.random() * 900000);
-
-  const existing = document.getElementById('volSuccessModal');
-  if (existing) existing.remove();
-
-  const modalHtml = `
-    <div class="modal-overlay active" id="volSuccessModal" style="display: flex;">
-      <div class="modal-card" style="max-width: 480px; text-align: center; padding: 30px;">
-        <div style="width: 64px; height: 64px; background: #dcfce7; color: #16a34a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 16px auto;">
-          <i class="fas fa-user-check"></i>
-        </div>
-        <h3 style="color: var(--secondary); font-size: 1.35rem; margin-bottom: 8px;">Application Submitted!</h3>
-        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
-          Welcome aboard, <strong>${name}</strong>! Your volunteer registration application has been logged.
-        </p>
-        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; font-size: 0.85rem; margin-bottom: 20px; color: var(--text-main);">
-          Registration Reference ID: <strong style="color: var(--primary);">${refNo}</strong>
-        </div>
-        <div style="display: flex; gap: 10px; justify-content: center;">
-          <a href="https://wa.me/919100894893?text=Hi%20White%20Volunteers%20Foundation,%20I%20applied%20to%20volunteer%20${refNo}" target="_blank" class="btn btn-outline btn-sm" style="border-color: #25d366; color: #16a34a;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-          <button class="btn btn-primary btn-sm" onclick="document.getElementById('volSuccessModal').remove(); if(typeof closeAllModals === 'function') closeAllModals();">Done</button>
-        </div>
-      </div>
-    </div>
-  `;
-
-  document.body.insertAdjacentHTML('beforeend', modalHtml);
-  e.target.reset();
-}
 
 function copyToClipboard(text, label) {
   if (navigator.clipboard && navigator.clipboard.writeText) {

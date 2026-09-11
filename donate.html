@@ -147,17 +147,17 @@
   <div class="topbar">
     <div class="container topbar-container">
       <div class="topbar-group">
-        <span class="topbar-item"><i class="fas fa-map-marker-alt"></i> HQ: Greater Hyderabad, Telangana - 500083</span>
+        <span class="topbar-item"><i class="fas fa-map-marker-alt"></i> HQ: #281/A, Srinivas Nagar, Dr. AS Rao Nagar, Hyderabad - 500062</span>
         <span class="topbar-sep">&bull;</span>
-        <span class="topbar-item"><i class="fas fa-envelope"></i> <a href="mailto:founderwvfindia@wvfindia.org">founderwvfindia@wvfindia.org</a></span>
+        <span class="topbar-item"><i class="fas fa-envelope"></i> <a href="mailto:urbandonors@gmail.com">urbandonors@gmail.com</a></span>
       </div>
 
       <div class="topbar-group">
-        <span class="topbar-item"><i class="fas fa-phone-alt"></i> <a href="tel:+919100894893">+91 91008 94893</a> / <a href="tel:+918400996611">84009 96611</a> / <a href="tel:+919186211983">91862 11983</a></span>
+        <span class="topbar-item"><i class="fas fa-phone-alt"></i> <a href="tel:+919186211983">+91 91862 11983</a></span>
         <span class="topbar-sep">&bull;</span>
         <div class="topbar-socials">
           <a href="https://www.facebook.com/www.wvfindia.org?mibextid=rS40aB7S9Ucbxw6v" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/p/DHYTIrJPWHr/?igsh=NXNieDFqODU4czhj" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/reel/Da6GOGvSMWw/?stkn=bHlpNWhpMzR2dXZw" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://in.linkedin.com/in/latha-maraveni-44308a165" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
@@ -389,8 +389,8 @@
       <a href="#payment-portal" class="btn btn-primary" style="width: 100%; border-radius: 50px; font-weight: 700; padding: 12px; text-align: center;"><i class="fas fa-heart"></i> Donate Now</a>
       <button class="btn btn-outline" style="width: 100%; border-radius: 50px; font-weight: 600; padding: 10px;" onclick="openVolunteerModal('Mobile Drawer')"><i class="fas fa-user-plus"></i> Join as Volunteer</button>
       <div class="drawer-quick-contact">
-        <a href="tel:+919100894893" class="quick-contact-btn"><i class="fas fa-phone-alt"></i> Call Us</a>
-        <a href="https://wa.me/919100894893" target="_blank" class="quick-contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="tel:+919186211983" class="quick-contact-btn"><i class="fas fa-phone-alt"></i> Call Us</a>
+        <a href="https://wa.me/919186211983" target="_blank" class="quick-contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       </div>
     </div>
   </div>
@@ -481,16 +481,18 @@
           <div style="background: #ffffff; padding: 1.75rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); margin-bottom: 1.5rem;">
             <h4 style="margin-bottom: 0.5rem; color: var(--dark);">Request 80G Tax Exemption Receipt</h4>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem;">After making your payment via PhonePe / UPI / Bank, enter your transaction reference below to receive your official 80G Tax Receipt.</p>
-            <form onsubmit="event.preventDefault(); showToast('Thank you! Your 80G tax receipt request has been recorded. Our accounts team will email the receipt.', 'success'); this.reset();">
+            <form onsubmit="handleDonationReceiptSubmit(event)" id="receipt80GForm">
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
-                <input type="text" class="form-control" placeholder="Donor Full Name" required>
-                <input type="text" class="form-control" placeholder="PAN Number (for 80G)" required>
+                <input type="text" id="donorName" name="donorName" class="form-control" placeholder="Donor Full Name *" required>
+                <input type="text" id="donorPan" name="donorPan" class="form-control" placeholder="PAN Number (for 80G) *" required>
               </div>
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
-                <input type="email" class="form-control" placeholder="Email Address" required>
-                <input type="text" class="form-control" placeholder="UPI Reference / UTR Number" required>
+                <input type="email" id="donorEmail" name="donorEmail" class="form-control" placeholder="Email Address *" required>
+                <input type="text" id="donorRef" name="donorRef" class="form-control" placeholder="UPI Reference / UTR Number *" required>
               </div>
-              <button type="submit" class="btn btn-outline" style="width: 100%;">Submit Payment Details for 80G Receipt</button>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fas fa-file-invoice"></i> Submit Payment Details for 80G Receipt
+              </button>
             </form>
           </div>
 
@@ -568,13 +570,13 @@
             <div class="phone-box" style="background: #f8fafc; border: 1.5px dashed var(--primary); padding: 18px; border-radius: 14px; text-align: center; margin-bottom: 18px;">
               <span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">GPay / PhonePe Mobile Number</span>
               <div class="phone-number" style="font-size: 1.45rem; font-weight: 800; color: var(--secondary); margin: 8px 0; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                <span>+91 91008 94893</span>
+                <span>+91 91862 11983</span>
               </div>
               <div style="display: flex; gap: 8px; justify-content: center; margin-top: 10px;">
-                <button class="btn btn-primary btn-sm" onclick="copyToClipboard('+919100894893', 'GPay/PhonePe Number (9100894893)')">
+                <button class="btn btn-primary btn-sm" onclick="copyToClipboard('+919186211983', 'GPay/PhonePe Number (9186211983)')">
                   Copy Number
                 </button>
-                <a href="tel:+919100894893" class="btn btn-outline btn-sm">
+                <a href="tel:+919186211983" class="btn btn-outline btn-sm">
                   Call Support
                 </a>
               </div>
@@ -584,10 +586,10 @@
             <div style="background: #f1f5f9; padding: 14px 16px; border-radius: 12px; margin-bottom: 18px; font-size: 0.84rem; text-align: center;">
               <span style="color: var(--text-muted); font-weight: 600;">Main Foundation Helplines:</span>
               <div style="font-weight: 700; color: var(--secondary); margin-top: 4px;">
-                <a href="tel:+919100894893" style="color: var(--secondary);">+91 91008 94893</a> &bull; <a href="tel:+918400996611" style="color: var(--secondary);">+91 84009 96611</a> &bull; <a href="tel:+919186211983" style="color: var(--secondary);">+91 91862 11983</a>
+                <a href="tel:+919186211983" style="color: var(--secondary);">+91 91862 11983</a>
               </div>
               <div style="color: var(--primary); font-weight: 600; margin-top: 4px;">
-                <a href="mailto:founderwvfindia@wvfindia.org">founderwvfindia@wvfindia.org</a>
+                <a href="mailto:urbandonors@gmail.com">urbandonors@gmail.com</a>
               </div>
             </div>
 
@@ -597,10 +599,10 @@
               <div style="font-size: 0.82rem; color: var(--text-main); line-height: 1.6;">
                 <div><strong>Account Name:</strong> White Volunteers Foundation</div>
                 <div><strong>Bank Name:</strong> State Bank of India / HDFC</div>
-                <div><strong>Branch:</strong> Greater Hyderabad, Keesara</div>
+                <div><strong>Branch:</strong> Dr. AS Rao Nagar, Hyderabad</div>
                 <div><strong>Exemption:</strong> 80G Tax Exemption Eligible</div>
                 <div style="margin-top: 0.5rem;">
-                  <button class="btn btn-primary btn-sm" onclick="copyToClipboard('founderwvfindia@wvfindia.org', 'Accounts Office Email')">Contact Accounts Office</button>
+                  <button class="btn btn-primary btn-sm" onclick="copyToClipboard('urbandonors@gmail.com', 'Accounts Office Email')">Contact Accounts Office</button>
                 </div>
               </div>
             </div>
@@ -656,15 +658,15 @@
             <h4>National HQ</h4>
             <div class="footer-contact-item">
               <i class="fas fa-map-marker-alt"></i>
-              <span>#10-551, Nagaram, Keesara, Greater Hyderabad, Telangana - 500083</span>
+              <span>#281/A, Srinivas Nagar, Beside Aditya Degree College, Dr. AS Rao Nagar, Hyderabad, Telangana - 500062</span>
             </div>
             <div class="footer-contact-item">
               <i class="fas fa-phone-alt"></i>
-              <span><a href="tel:+919100894893" style="color: inherit;">+91 91008 94893</a> / <a href="tel:+918400996611" style="color: inherit;">84009 96611</a></span>
+              <span><a href="tel:+919186211983" style="color: inherit;">+91 91862 11983</a></span>
             </div>
             <div class="footer-contact-item">
               <i class="fas fa-envelope"></i>
-              <span><a href="mailto:founderwvfindia@wvfindia.org" style="color: inherit;">founderwvfindia@wvfindia.org</a></span>
+              <span><a href="mailto:urbandonors@gmail.com" style="color: inherit;">urbandonors@gmail.com</a></span>
             </div>
           </div>
         </div>
@@ -744,7 +746,7 @@
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div class="form-group">
               <label for="volPhone">Phone / WhatsApp *</label>
-              <input type="tel" id="volPhone" class="form-control" placeholder="+91 91008 94893" required>
+              <input type="tel" id="volPhone" class="form-control" placeholder="+91 91862 11983" required>
             </div>
             <div class="form-group">
               <label for="volEmail">Email *</label>
